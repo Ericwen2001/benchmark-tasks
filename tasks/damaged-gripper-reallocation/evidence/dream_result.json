@@ -1,0 +1,46 @@
+{
+  "completed": true,
+  "wall_seconds": 474.25242694700137,
+  "final": {
+    "step": 1795,
+    "phase": "Dream-1 control",
+    "block_positions": {
+      "orange": [
+        0.13059978187084198,
+        -0.0961657389998436,
+        0.7805666923522949
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.5349502886103827,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 44.6999999999996
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  "score": 0.5,
+  "scope": "Dream-1 beta controls both arms; two color-matched transfers; 90-second trial, same scene and scoring."
+}

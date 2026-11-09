@@ -1,0 +1,6682 @@
+[
+  {
+    "step": 0,
+    "phase": "settle",
+    "block_positions": {
+      "orange": [
+        0.25173911452293396,
+        -0.07969644665718079,
+        0.7784543037414551
+      ],
+      "apple": [
+        0.2501062750816345,
+        0.08000445365905762,
+        0.7785215973854065
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 5,
+    "phase": "settle",
+    "block_positions": {
+      "orange": [
+        0.25393301248550415,
+        -0.07802936434745789,
+        0.7778637409210205
+      ],
+      "apple": [
+        0.2516360878944397,
+        0.08038389682769775,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 10,
+    "phase": "settle",
+    "block_positions": {
+      "orange": [
+        0.2541981637477875,
+        -0.07750464230775833,
+        0.7777607440948486
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 15,
+    "phase": "settle",
+    "block_positions": {
+      "orange": [
+        0.25326699018478394,
+        -0.07805504649877548,
+        0.7777562141418457
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385957479477,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 20,
+    "phase": "orange: to the object",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805504649877548,
+        0.7777562141418457
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 25,
+    "phase": "orange: to the object",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805503159761429,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 30,
+    "phase": "orange: to the object",
+    "block_positions": {
+      "orange": [
+        0.25326699018478394,
+        -0.07805503904819489,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 35,
+    "phase": "orange: to the object",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805504649877548,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 40,
+    "phase": "orange: to the object",
+    "block_positions": {
+      "orange": [
+        0.25326699018478394,
+        -0.07805504649877548,
+        0.7777562141418457
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 45,
+    "phase": "orange: to the object",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805503904819489,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 50,
+    "phase": "orange: to the object",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805504649877548,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 55,
+    "phase": "orange: to the object",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805505394935608,
+        0.7777562141418457
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 60,
+    "phase": "orange: to the object",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805504649877548,
+        0.7777562141418457
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 65,
+    "phase": "orange: descend",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805504649877548,
+        0.7777562141418457
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 70,
+    "phase": "orange: descend",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805503904819489,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038385212421417,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 75,
+    "phase": "orange: descend",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805505394935608,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038385957479477,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 80,
+    "phase": "orange: descend",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805503159761429,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 85,
+    "phase": "orange: descend",
+    "block_positions": {
+      "orange": [
+        0.25326699018478394,
+        -0.07805503159761429,
+        0.7777563333511353
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 90,
+    "phase": "orange: descend",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805504649877548,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 95,
+    "phase": "orange: descend",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805505394935608,
+        0.7777562141418457
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 100,
+    "phase": "orange: descend",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805503904819489,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 105,
+    "phase": "orange: close",
+    "block_positions": {
+      "orange": [
+        0.25326696038246155,
+        -0.07805503904819489,
+        0.7777562737464905
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038382977247238,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 110,
+    "phase": "orange: close",
+    "block_positions": {
+      "orange": [
+        0.25326699018478394,
+        -0.07805503159761429,
+        0.7777562141418457
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 115,
+    "phase": "orange: close",
+    "block_positions": {
+      "orange": [
+        0.25306758284568787,
+        -0.0791853591799736,
+        0.7778716683387756
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 120,
+    "phase": "orange: close",
+    "block_positions": {
+      "orange": [
+        0.25291189551353455,
+        -0.08048775047063828,
+        0.777904748916626
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 125,
+    "phase": "orange: close",
+    "block_positions": {
+      "orange": [
+        0.2547125220298767,
+        -0.09174846112728119,
+        0.7782873511314392
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 130,
+    "phase": "orange: lift",
+    "block_positions": {
+      "orange": [
+        0.2536856532096863,
+        -0.09409433603286743,
+        0.7779134511947632
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 135,
+    "phase": "orange: lift",
+    "block_positions": {
+      "orange": [
+        0.2530632019042969,
+        -0.09407239407300949,
+        0.7833884358406067
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 140,
+    "phase": "orange: lift",
+    "block_positions": {
+      "orange": [
+        0.2550565004348755,
+        -0.09180355072021484,
+        0.7997055053710938
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038382977247238,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 145,
+    "phase": "orange: lift",
+    "block_positions": {
+      "orange": [
+        0.2558934688568115,
+        -0.09068130701780319,
+        0.8184954524040222
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 150,
+    "phase": "orange: lift",
+    "block_positions": {
+      "orange": [
+        0.2564322352409363,
+        -0.09047962725162506,
+        0.8379489183425903
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 155,
+    "phase": "orange: lift",
+    "block_positions": {
+      "orange": [
+        0.2560536563396454,
+        -0.09103957563638687,
+        0.8539897203445435
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 160,
+    "phase": "orange: lift",
+    "block_positions": {
+      "orange": [
+        0.2548150420188904,
+        -0.0922931581735611,
+        0.864279568195343
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 165,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.25247853994369507,
+        -0.09447135776281357,
+        0.8662073016166687
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 170,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.24555997550487518,
+        -0.097939632833004,
+        0.8653672337532043
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 175,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.2335754781961441,
+        -0.10161077231168747,
+        0.865803062915802
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 180,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.21804915368556976,
+        -0.10653235018253326,
+        0.8659293055534363
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 185,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.20035763084888458,
+        -0.11205744743347168,
+        0.8661177754402161
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 190,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.18183107674121857,
+        -0.11781574785709381,
+        0.8662658333778381
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 195,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.16380177438259125,
+        -0.1234017089009285,
+        0.8663881421089172
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 200,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.1476161926984787,
+        -0.1284441202878952,
+        0.8664824962615967
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 205,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.13466192781925201,
+        -0.1325761079788208,
+        0.8665544390678406
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 210,
+    "phase": "orange: carry",
+    "block_positions": {
+      "orange": [
+        0.12635357677936554,
+        -0.13538682460784912,
+        0.8666184544563293
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 215,
+    "phase": "orange: lower",
+    "block_positions": {
+      "orange": [
+        0.12377861142158508,
+        -0.1363143026828766,
+        0.8666505813598633
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 220,
+    "phase": "orange: lower",
+    "block_positions": {
+      "orange": [
+        0.1234259083867073,
+        -0.13615994155406952,
+        0.8660418391227722
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 225,
+    "phase": "orange: lower",
+    "block_positions": {
+      "orange": [
+        0.12272260338068008,
+        -0.1366615891456604,
+        0.8623268604278564
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 230,
+    "phase": "orange: lower",
+    "block_positions": {
+      "orange": [
+        0.12241441756486893,
+        -0.13675160706043243,
+        0.858844518661499
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 235,
+    "phase": "orange: lower",
+    "block_positions": {
+      "orange": [
+        0.12233227491378784,
+        -0.13685742020606995,
+        0.8550429940223694
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 240,
+    "phase": "orange: lower",
+    "block_positions": {
+      "orange": [
+        0.12238172441720963,
+        -0.13677263259887695,
+        0.8517378568649292
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 245,
+    "phase": "orange: lower",
+    "block_positions": {
+      "orange": [
+        0.12275779247283936,
+        -0.13618388772010803,
+        0.8498803973197937
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038382977247238,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 250,
+    "phase": "orange: release",
+    "block_positions": {
+      "orange": [
+        0.12280760705471039,
+        -0.1362542062997818,
+        0.8488467335700989
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 255,
+    "phase": "orange: release",
+    "block_positions": {
+      "orange": [
+        0.1224297434091568,
+        -0.12978258728981018,
+        0.8489253520965576
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 260,
+    "phase": "orange: release",
+    "block_positions": {
+      "orange": [
+        0.12258225679397583,
+        -0.1197887733578682,
+        0.7998242378234863
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.5719864435885686,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 265,
+    "phase": "orange: retreat",
+    "block_positions": {
+      "orange": [
+        0.15194912254810333,
+        -0.12258471548557281,
+        0.7806360721588135
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6074751986224233,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 270,
+    "phase": "orange: retreat",
+    "block_positions": {
+      "orange": [
+        0.14765867590904236,
+        -0.12083657830953598,
+        0.780124306678772
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6175140415140414,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 275,
+    "phase": "orange: retreat",
+    "block_positions": {
+      "orange": [
+        0.14538125693798065,
+        -0.12007879465818405,
+        0.7800279855728149
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6072386831539245,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 280,
+    "phase": "orange: retreat",
+    "block_positions": {
+      "orange": [
+        0.14554525911808014,
+        -0.12011456489562988,
+        0.7799705266952515
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038382977247238,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075472012414012,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 285,
+    "phase": "orange: retreat",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 290,
+    "phase": "orange: retreat",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 295,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011360377073288,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 300,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 305,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011364847421646,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075324101213758,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 310,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358141899109,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 315,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554618299007416,
+        -0.12011361122131348,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 320,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011359632015228,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038384467363358,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.25
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 325,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011362612247467,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911008,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.49999999999999994
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 330,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.1201135665178299,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.7500000000000001
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 335,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 1.0000000000000002
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 340,
+    "phase": "orange: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011359632015228,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 1.2500000000000004
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 345,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135590672493,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 1.5000000000000007
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 350,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135590672493,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.0,
+      "components": {
+        "orange": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 1.7500000000000009
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 355,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011361122131348,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 2.000000000000001
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 360,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 2.25
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 365,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011363357305527,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911007,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 2.499999999999999
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 370,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011362612247467,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 2.7499999999999982
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 375,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011362612247467,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911008,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 2.9999999999999973
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 380,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 3.2499999999999964
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 385,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011359632015228,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038387447595596,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 3.4999999999999956
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 390,
+    "phase": "orange: release check",
+    "block_positions": {
+      "orange": [
+        0.14554618299007416,
+        -0.12011363357305527,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911008,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 3.7499999999999947
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 395,
+    "phase": "apple: to the object",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 3.999999999999994
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 400,
+    "phase": "apple: to the object",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011359632015228,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911008,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 4.249999999999993
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 405,
+    "phase": "apple: to the object",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135516166687,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 4.499999999999992
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 410,
+    "phase": "apple: to the object",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 4.749999999999991
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 415,
+    "phase": "apple: to the object",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011359632015228,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038384467363358,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 4.99999999999999
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 420,
+    "phase": "apple: to the object",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358141899109,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 5.249999999999989
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 425,
+    "phase": "apple: to the object",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011361867189407,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911008,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 5.4999999999999885
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 430,
+    "phase": "apple: to the object",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613244,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 5.749999999999988
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 435,
+    "phase": "apple: to the object",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 5.999999999999987
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 440,
+    "phase": "apple: descend",
+    "block_positions": {
+      "orange": [
+        0.14554618299007416,
+        -0.12011359632015228,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 6.249999999999986
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 445,
+    "phase": "apple: descend",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011360377073288,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 6.499999999999985
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 450,
+    "phase": "apple: descend",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011357396841049,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 6.749999999999984
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 455,
+    "phase": "apple: descend",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358886957169,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385957479477,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 6.999999999999983
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 460,
+    "phase": "apple: descend",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 7.249999999999982
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 465,
+    "phase": "apple: descend",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011357396841049,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385957479477,
+        0.7784804105758667
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 7.499999999999981
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 470,
+    "phase": "apple: descend",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.25163590908050537,
+        0.08038384467363358,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 7.7499999999999805
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 475,
+    "phase": "apple: descend",
+    "block_positions": {
+      "orange": [
+        0.14554618299007416,
+        -0.12011358141899109,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038383722305298,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 7.99999999999998
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 480,
+    "phase": "apple: descend",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011363357305527,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.251635879278183,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613244,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 8.249999999999982
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 485,
+    "phase": "apple: close",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011360377073288,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516358494758606,
+        0.08038385212421417,
+        0.7784804701805115
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 8.499999999999986
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 490,
+    "phase": "apple: close",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358886957169,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.25164222717285156,
+        0.08034472912549973,
+        0.7784998416900635
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 8.74999999999999
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 495,
+    "phase": "apple: close",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011360377073288,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2516280710697174,
+        0.080113485455513,
+        0.7785558104515076
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 8.999999999999993
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 500,
+    "phase": "apple: close",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.1201135590672493,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2517288029193878,
+        0.07878027856349945,
+        0.7788011431694031
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 9.249999999999996
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 505,
+    "phase": "apple: lift",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2530723214149475,
+        0.06921374797821045,
+        0.7787847518920898
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 9.5
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 510,
+    "phase": "apple: lift",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011357396841049,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.253113716840744,
+        0.0651671513915062,
+        0.7800266146659851
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 9.750000000000004
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 515,
+    "phase": "apple: lift",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.1201135590672493,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.25469788908958435,
+        0.06711268424987793,
+        0.794922947883606
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 10.000000000000007
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": false,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 520,
+    "phase": "apple: lift",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011359632015228,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.25562813878059387,
+        0.0692799761891365,
+        0.8142732977867126
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 10.25000000000001
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 525,
+    "phase": "apple: lift",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135665178299,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.2566303312778473,
+        0.06991121917963028,
+        0.8334478139877319
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 10.500000000000014
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 530,
+    "phase": "apple: lift",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011359632015228,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.256703644990921,
+        0.07016845792531967,
+        0.8505769968032837
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 10.750000000000018
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 535,
+    "phase": "apple: lift",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2558954060077667,
+        0.0687795877456665,
+        0.8614994883537292
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 11.000000000000021
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 540,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.2538334131240845,
+        0.06557365506887436,
+        0.8640395402908325
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 11.250000000000025
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 545,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011359632015228,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.2469196319580078,
+        0.06611024588346481,
+        0.8634411096572876
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 11.500000000000028
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 550,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011363357305527,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.23528292775154114,
+        0.06857451051473618,
+        0.8637539148330688
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075324101213758,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 11.750000000000032
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 555,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011358886957169,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.21995456516742706,
+        0.07305645197629929,
+        0.8639339804649353
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613244,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 12.000000000000036
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 560,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554618299007416,
+        -0.12011362612247467,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.20230068266391754,
+        0.07858329266309738,
+        0.8639289736747742
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911008,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 12.250000000000039
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 565,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.12011358141899109,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.18352223932743073,
+        0.08468930423259735,
+        0.8640076518058777
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 12.500000000000043
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 570,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.1201135665178299,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.16496512293815613,
+        0.09075605124235153,
+        0.863933801651001
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 12.750000000000046
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 575,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358886957169,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.14830856025218964,
+        0.09674673527479172,
+        0.8636597394943237
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 13.00000000000005
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 580,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554618299007416,
+        -0.12011362612247467,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.13458946347236633,
+        0.10105198621749878,
+        0.8637322783470154
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 13.250000000000053
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 585,
+    "phase": "apple: carry",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358141899109,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.12493565678596497,
+        0.10375228524208069,
+        0.8638560771942139
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 13.500000000000057
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 590,
+    "phase": "apple: lower",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.12215249240398407,
+        0.10537435114383698,
+        0.8639310002326965
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 13.75000000000006
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 595,
+    "phase": "apple: lower",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011357396841049,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.12249863892793655,
+        0.10533974319696426,
+        0.8635978698730469
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 14.000000000000064
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 600,
+    "phase": "apple: lower",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.1201135590672493,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.12231868505477905,
+        0.10390953719615936,
+        0.8611260652542114
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 14.250000000000068
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 605,
+    "phase": "apple: lower",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135590672493,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.121993288397789,
+        0.10309267789125443,
+        0.8565779328346252
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 14.500000000000071
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 610,
+    "phase": "apple: lower",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358886957169,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.12224507331848145,
+        0.10314510017633438,
+        0.8537546992301941
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 14.750000000000075
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 615,
+    "phase": "apple: lower",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011357396841049,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.12227374315261841,
+        0.10293020308017731,
+        0.8508626818656921
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 15.000000000000078
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 620,
+    "phase": "apple: lower",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011360377073288,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.12260083854198456,
+        0.1038026213645935,
+        0.8489480018615723
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 15.250000000000082
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 625,
+    "phase": "apple: release",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.12011358886957169,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.12242409586906433,
+        0.1045166403055191,
+        0.8482732772827148
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 15.500000000000085
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 630,
+    "phase": "apple: release",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011363357305527,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.12234291434288025,
+        0.10737153142690659,
+        0.8481312990188599
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 15.750000000000089
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": false,
+          "contained_fraction": 0.0,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 635,
+    "phase": "apple: release",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358141899109,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.12151122093200684,
+        0.12105890363454819,
+        0.7990451455116272
+      ]
+    },
+    "geometric_success": false,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 16.000000000000092
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.5858641048082802,
+          "released": false,
+          "stationary": false,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 640,
+    "phase": "apple: release",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011360377073288,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.1163603663444519,
+        0.11962506175041199,
+        0.7815081477165222
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 16.250000000000096
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7595000580675907,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 645,
+    "phase": "apple: retreat",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011359632015228,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 16.5000000000001
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 650,
+    "phase": "apple: retreat",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011361122131348,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 16.750000000000103
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 655,
+    "phase": "apple: retreat",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011360377073288,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640392988920212,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 17.000000000000107
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 660,
+    "phase": "apple: retreat",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 17.25000000000011
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 665,
+    "phase": "apple: retreat",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135590672493,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 17.500000000000114
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492268,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 670,
+    "phase": "apple: retreat",
+    "block_positions": {
+      "orange": [
+        0.1455461084842682,
+        -0.1201135665178299,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 17.750000000000117
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492266,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 675,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011357396841049,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 18.00000000000012
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 680,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640392988920212,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 18.250000000000124
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": false,
+          "stationary": true,
+          "stable_seconds": 0.0
+        }
+      }
+    }
+  },
+  {
+    "step": 685,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.1201135665178299,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 18.500000000000128
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.15000000000000002
+        }
+      }
+    }
+  },
+  {
+    "step": 690,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135441660881,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 18.75000000000013
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.39999999999999997
+        }
+      }
+    }
+  },
+  {
+    "step": 695,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011359632015228,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911008,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 19.000000000000135
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.65
+        }
+      }
+    }
+  },
+  {
+    "step": 700,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135665178299,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042316198349,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 19.25000000000014
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 0.9000000000000002
+        }
+      }
+    }
+  },
+  {
+    "step": 705,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358886957169,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 19.500000000000142
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 1.1500000000000004
+        }
+      }
+    }
+  },
+  {
+    "step": 710,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011357396841049,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.11970420926809311,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 19.750000000000146
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619919290424296,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 1.4000000000000006
+        }
+      }
+    }
+  },
+  {
+    "step": 715,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135516166687,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 20.00000000000015
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 1.6500000000000008
+        }
+      }
+    }
+  },
+  {
+    "step": 720,
+    "phase": "apple: withdraw after vertical clearance",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011357396841049,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 0.5,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 20.250000000000153
+        },
+        "apple": {
+          "score": 0.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492268,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 1.900000000000001
+        }
+      }
+    }
+  },
+  {
+    "step": 725,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 20.500000000000156
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492268,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 2.1500000000000004
+        }
+      }
+    }
+  },
+  {
+    "step": 730,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135516166687,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 20.75000000000016
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 2.3999999999999995
+        }
+      }
+    }
+  },
+  {
+    "step": 735,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554612338542938,
+        -0.1201135665178299,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.11970420926809311,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.607531242432047,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 21.000000000000163
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 2.6499999999999986
+        }
+      }
+    }
+  },
+  {
+    "step": 740,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358886957169,
+        0.7799702882766724
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 21.250000000000167
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 2.8999999999999977
+        }
+      }
+    }
+  },
+  {
+    "step": 745,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011360377073288,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.11970420926809311,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 21.50000000000017
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 3.149999999999997
+        }
+      }
+    }
+  },
+  {
+    "step": 750,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011359632015228,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 21.750000000000174
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492268,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 3.399999999999996
+        }
+      }
+    }
+  },
+  {
+    "step": 755,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554618299007416,
+        -0.12011363357305527,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042316198349,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911008,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 22.000000000000178
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 3.649999999999995
+        }
+      }
+    }
+  },
+  {
+    "step": 760,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554618299007416,
+        -0.12011361122131348,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 22.25000000000018
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 3.899999999999994
+        }
+      }
+    }
+  },
+  {
+    "step": 765,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 22.500000000000185
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 4.149999999999993
+        }
+      }
+    }
+  },
+  {
+    "step": 770,
+    "phase": "apple: release check",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011359632015228,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640392988920212,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 22.75000000000019
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 4.399999999999992
+        }
+      }
+    }
+  },
+  {
+    "step": 775,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011360377073288,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640392988920212,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 23.000000000000192
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492268,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 4.6499999999999915
+        }
+      }
+    }
+  },
+  {
+    "step": 780,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042316198349,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 23.250000000000195
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 4.899999999999991
+        }
+      }
+    }
+  },
+  {
+    "step": 785,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011360377073288,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911007,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 23.5000000000002
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 5.14999999999999
+        }
+      }
+    }
+  },
+  {
+    "step": 790,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011360377073288,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 23.750000000000203
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492268,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 5.399999999999989
+        }
+      }
+    }
+  },
+  {
+    "step": 795,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011360377073288,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613246,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 24.000000000000206
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 5.649999999999988
+        }
+      }
+    }
+  },
+  {
+    "step": 800,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554613828659058,
+        -0.12011358141899109,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075312424320469,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 24.25000000000021
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 5.899999999999987
+        }
+      }
+    }
+  },
+  {
+    "step": 805,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011360377073288,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 24.500000000000213
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 6.149999999999986
+        }
+      }
+    }
+  },
+  {
+    "step": 810,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011359632015228,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640394479036331,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 24.750000000000217
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 6.399999999999985
+        }
+      }
+    }
+  },
+  {
+    "step": 815,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554615318775177,
+        -0.12011359632015228,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640393733978271,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 25.00000000000022
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492268,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 6.649999999999984
+        }
+      }
+    }
+  },
+  {
+    "step": 820,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011360377073288,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640392988920212,
+        0.1197042241692543,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 25.250000000000224
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492268,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 6.8999999999999835
+        }
+      }
+    }
+  },
+  {
+    "step": 825,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011364102363586,
+        0.7799701690673828
+      ],
+      "apple": [
+        0.11640392988920212,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075320208911008,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 25.500000000000227
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492268,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 7.149999999999983
+        }
+      }
+    }
+  },
+  {
+    "step": 830,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011359632015228,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640392988920212,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 25.75000000000023
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 7.399999999999982
+        }
+      }
+    }
+  }
+]

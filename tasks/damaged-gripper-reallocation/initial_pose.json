@@ -1,0 +1,11 @@
+{
+  "left_joints": [
+    -0.1228572727,
+    1.1415540621,
+    1.1520109305,
+    -1.1762115805,
+    0.7056268534,
+    -0.1268144262
+  ],
+  "purpose": "Natural side/down posture; native wrist observes task objects; missing gripper visible in top."
+}

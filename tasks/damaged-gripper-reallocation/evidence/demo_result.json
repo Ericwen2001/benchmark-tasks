@@ -1,0 +1,47 @@
+{
+  "completed": true,
+  "wall_seconds": 177.55490438395645,
+  "final": {
+    "step": 830,
+    "phase": "done",
+    "block_positions": {
+      "orange": [
+        0.14554616808891296,
+        -0.12011359632015228,
+        0.7799702286720276
+      ],
+      "apple": [
+        0.11640392988920212,
+        0.1197042167186737,
+        0.7814937829971313
+      ]
+    },
+    "geometric_success": true,
+    "assessment": {
+      "score": 1.0,
+      "components": {
+        "orange": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.6075316316613245,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 25.75000000000023
+        },
+        "apple": {
+          "score": 1.0,
+          "lifted": true,
+          "inside": true,
+          "contained_fraction": 0.7619925413492267,
+          "released": true,
+          "stationary": true,
+          "stable_seconds": 7.399999999999982
+        }
+      }
+    }
+  },
+  "worst_ik_mm": 0.09564328224376742,
+  "score": 1.0,
+  "scope": "Two color-matched transfers, each lifted/released/stable. Scripted intact-hand feasibility, not policy reallocation evidence. Dream-1 deferred."
+}
