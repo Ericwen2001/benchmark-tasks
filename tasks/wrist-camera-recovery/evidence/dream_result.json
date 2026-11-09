@@ -1,0 +1,39 @@
+{
+  "completed": true,
+  "wall_seconds": 522.5099812310073,
+  "final": {
+    "step": 1795,
+    "phase": "Dream-1 control",
+    "attached": false,
+    "latch_step": null,
+    "camera_pos": [
+      0.35999998450279236,
+      -0.18983019888401031,
+      0.7614997625350952
+    ],
+    "target": [
+      -0.2800045068757408,
+      0.2680241535547371,
+      1.1803330867073705
+    ],
+    "error_m": 0.8914357579035058,
+    "angle_deg": 44.58438425351281,
+    "right_clear": false,
+    "retained_seconds": 0.0,
+    "sensor_error_m": 2.8030157608017234e-08,
+    "sensor_angle_rad": 6.506962442722194e-08,
+    "image_std": 42.85525131225586,
+    "native_error_m": 0.8783555902093143,
+    "native_angle_deg": 44.584387830081106,
+    "returned": false,
+    "assessment": {
+      "score": 0.0,
+      "mechanical": false,
+      "sensor_ok": true,
+      "retained_seconds": 0.0
+    }
+  },
+  "retention_pass": false,
+  "score": 0.0,
+  "scope": "Dream-1 beta controls both arms; original optical target and scorer unchanged; 90-second trial."
+}

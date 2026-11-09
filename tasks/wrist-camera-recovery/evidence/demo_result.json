@@ -1,0 +1,39 @@
+{
+  "completed": true,
+  "wall_seconds": 131.75643549801316,
+  "final": {
+    "step": 625,
+    "phase": "return to original working posture",
+    "attached": true,
+    "latch_step": 353,
+    "camera_pos": [
+      0.3049863278865814,
+      0.30585628747940063,
+      1.1102946996688843
+    ],
+    "target": [
+      0.30286609167684375,
+      0.3041869053192872,
+      1.1130876037873507
+    ],
+    "error_m": 0.003883626114410929,
+    "angle_deg": 1.7751683321645357,
+    "right_clear": true,
+    "retained_seconds": 11.100000000000023,
+    "sensor_error_m": 8.773668893308799e-09,
+    "sensor_angle_rad": 1.2910930936716978e-07,
+    "image_std": 47.329139709472656,
+    "native_error_m": 0.00415965275498759,
+    "native_angle_deg": 1.775167013623296,
+    "returned": true,
+    "assessment": {
+      "score": 1.0,
+      "mechanical": true,
+      "sensor_ok": true,
+      "retained_seconds": 3.099999999999997
+    }
+  },
+  "retention_pass": true,
+  "score": 1.0,
+  "scope": "Original native camera-to-gripper calibration is immutable. Score additionally requires return to READY. Physical keyed latch approximation; no Dream-1."
+}
