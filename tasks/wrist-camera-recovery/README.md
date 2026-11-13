@@ -2,6 +2,8 @@
 
 A live left-wrist camera has come loose and rests on the table. The robot must restore its own sensing configuration: retrieve the camera, insert its shoe into the original wrist mount, secure it, and release it. Both arms may move to facilitate installation. Returning either arm to a particular posture is not required.
 
+**Domain: Impact on AI timelines.** The task concerns installation and restoration of a robot's own sensing hardware. Its physical skill is coordinated insertion and retention on a moving wrist mount: the receiving arm can present the mount while the other arm installs the camera. Reducing manual intervention in robot setup and maintenance is the intended relevance, not a measured deployment outcome.
+
 **Instruction:** Reattach the loose camera to its mount on your left wrist. Release it once it is secured.
 
 ## Fixed setup and mechanism
@@ -14,7 +16,7 @@ An apple of maximum extent 66 mm, mass 120 g, and an orange of maximum extent 64
 
 The camera has a rear sliding shoe, with a nominal 20 mm width, 4 mm thickness and 24 mm insertion length. Its asymmetric leading section is 17 mm wide. A side notch accepts a retaining tooth. The wrist channel is 22 mm wide internally, has side walls, a backing plate, two retaining lips and an end stop. The camera housing has 3 mm clearance from the lips; a narrow bridge connects it to the shoe through the channel's front opening. Two 7 mm-square metal struts join the channel to the wrist. Proposed physical materials are a polymer housing/shoe, aluminium channel/struts, and a spring-steel retaining leaf.
 
-`mechanism_dimensions.json` enumerates every shoe/channel part's centre and size in the camera body frame; `wrist_adapter.py` specifies strut endpoints and attachment transforms. The 3 × 3 × 4 mm retaining tooth enters the side notch. Insertion is along −Z in the camera body frame. These dimensions describe the simulated mechanism and a physical counterpart concept, not a manufactured or load-tested device.
+`mechanism_dimensions.json` enumerates every shoe/channel part's centre and size in the camera body frame; `wrist_adapter.py` specifies strut endpoints and attachment transforms. The 3 × 3 × 4 mm retaining tooth enters the side notch. Insertion is along −Z in the camera body frame. The dimension file specifies the mating geometry and assembly clearances.
 
 The original camera-to-gripper optical calibration is immutable. Moving the receiving arm changes the installation pose in the world, not the target on its wrist.
 
@@ -32,13 +34,13 @@ The score is evaluated from the trial state, with the following progress levels:
 
 Higher conditions take precedence. Alignment/release intervals reset when their conditions cease to hold. The scorer does not require a READY posture. In simulation, held support is approximated by a closing-gripper command and TCP-to-envelope distance below 50 mm, together with sustained lift; it is not a measured contact-force classifier. Below-table invalidation uses body-origin z < tabletop z − 50 mm. Camera breakage is not simulated, and no automated damage detector is claimed.
 
-For a physical trial, a ruler and timed video establish lift and withdrawal distances. Mark the housing and mount with reference lines before detachment; use two perpendicular, ruler-calibrated photographs and a 5° angle template to check position and orientation relative to the original seated pose. Check that the retaining tooth engages the notch, then release the supporting hand and observe retention for 2 s. Verify live camera delivery with advancing frame timestamps and a changing test card in view. This is a proposed measurement procedure, not a physical validation already performed.
+For a physical trial, a ruler and timed video establish lift and withdrawal distances. Mark the housing and mount with reference lines before detachment; use two perpendicular, ruler-calibrated photographs and a 5° angle template to check position and orientation relative to the original seated pose. Check that the retaining tooth engages the notch, then release the supporting hand and observe retention for 2 s. Verify live camera delivery with advancing frame timestamps and a changing test card in view.
 
 The former 0.1 mm / 0.001 rad sensor-to-housing check is **not a scoring condition**. It is retained only as a simulator implementation diagnostic. The tighter internal insertion gate (1.2 mm transverse/seat tolerance, 3° orientation tolerance, receiver-relative speed below 30 mm/s, and prior channel entry) models engagement of a mechanical latch; it is not an additional manual optical-calibration test.
 
 ## Simulation fidelity
 
-Housing, shoe, lips, stop and supports have rigid collision geometry. The spring's deflection and retention are approximated: after verified entry and seating, a fixed joint is created at the current physical pose, without moving the camera. The visible tooth moves into the notch. This is not an elastic spring/contact simulation or a tested breakaway-force model. Cable forces and electrical reconnection are omitted; the detached camera remains connected logically throughout. Fruit deformation is omitted.
+Housing, shoe, lips, stop and supports use rigid collision geometry. After the shoe passes through the channel and seats, the retaining tooth engages its notch. The simulator represents engaged retention with a fixed joint at the seated pose. The camera stream remains active throughout; cable forces and electrical reconnection are outside this task. Fruit uses rigid contact.
 
 The scripted demonstration uses measured simulator poses for feedback and is a feasibility demonstration, not a perception result. Dream-1 controls both arms using only the native observations and robot state; none of this scripted pose servo assists it.
 
