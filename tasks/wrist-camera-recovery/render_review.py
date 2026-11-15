@@ -24,3 +24,14 @@ subprocess.run(['ffmpeg','-v','error','-y','-framerate','4','-pattern_type','glo
 print(dst)
 
 Image.open(src/f'top_cam_{rows[0]["step"]:04d}.png').save(dst/'setup.png')
+
+if not is_dream:
+ # Preserve full temporal order and original speed. Diagnostic image never enters policy.
+ review=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s','960x584','-r','4','-i','-','-an','-c:v','libx264','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(dst/'demo_review.mp4')],stdin=subprocess.PIPE)
+ for row in rows:
+  im=Image.new('RGB',(960,584),'#122132');draw=ImageDraw.Draw(im)
+  for j,(name,title) in enumerate([('top_cam','Top camera'),('left_cam','Left wrist camera - live'),('right_cam','Right wrist camera')]):
+   draw.text((j*320+8,3),title,font=font,fill='white');im.paste(Image.open(src/f'{name}_{row["step"]:04d}.png'),(j*320,24))
+  draw.text((160,203),'Synchronized mechanism close-up (diagnostic view)',font=font,fill='white')
+  im.paste(Image.open(src/f'overview_cam_{row["step"]:04d}.png').resize((640,360)),(160,224));review.stdin.write(im.tobytes())
+ review.stdin.close();assert review.wait()==0

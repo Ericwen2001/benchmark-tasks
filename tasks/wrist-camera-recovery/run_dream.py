@@ -42,10 +42,12 @@ try:
  camera_paths=[str(p.GetPath()) for p in stage.Traverse() if p.HasAPI(UsdPhysics.RigidBodyAPI) and 'loose_camera' in str(p.GetPath())]
  if len(camera_paths)!=1:raise RuntimeError('Ambiguous camera rigid body '+str(camera_paths))
  assert stage.GetPrimAtPath(camera_paths[0]+'/shoe_core/geometry/mesh').HasAPI(UsdPhysics.CollisionAPI), 'Missing shoe collider'
- from latch_geometry import InsertionGate
- gate=InsertionGate()
- from motion import make_plan
- plan=make_plan();sensor=base.scene['left_cam']
+ from runtime_checks import LatchMonitor,FrameDeliveryMonitor,sensor_frame_id
+ latch_monitor=LatchMonitor();gate=latch_monitor.gate;frame_monitor=FrameDeliveryMonitor()
+ import omni.physics.tensors as physics_tensors
+ spring_sim=physics_tensors.create_simulation_view('torch');spring_sim.set_subspace_roots('/')
+ spring_view=spring_sim.create_rigid_body_view('/World/envs/env_0/SpringPlunger')
+ sensor=base.scene['left_cam']
  import isaaclab.sim as sim
  for name,size,position,color in [('lens_trim',(.018,.0002,.018),(0,.01811,0),(.15,.35,.55)),('lens',(.012,.0002,.012),(0,.01824,0),(.015,.02,.025))]:
   visual=sim.CuboidCfg(size=size,visual_material=sim.PreviewSurfaceCfg(diffuse_color=color))
@@ -89,8 +91,11 @@ try:
   error=float(np.linalg.norm(body.pos-target));angle=float(Rotation.from_matrix(targetR.T@R).magnitude())
   relative_offset=targetR.T@(body.pos-target)
   gate_speed=float(np.linalg.norm(relative_offset-np.array(gate.previous))/.05) if gate.previous is not None else float('inf')
-  if not attached and gate.update(relative_offset,angle,gate_speed):
-   wrist_adapter.latch(stage,parent,camera_paths[0],gp,gR,body.pos,R);attached=True;latch_step=k;wrist_adapter.engage_tooth(stage,parent)
+  from latch_geometry import TOOTH_ENGAGED
+  spring_xyz=spring_view.get_transforms()[0,:3].cpu().numpy()
+  spring_local=targetR.T@(spring_xyz-target)-np.array(TOOTH_ENGAGED)
+  attached=latch_monitor.update(relative_offset,angle,gate_speed,float(spring_local[0]));gate=latch_monitor.gate
+  if attached and latch_step is None:latch_step=k
   sensor.set_world_poses(positions=torch.tensor((body.pos+R@lens_offset)[None],device=base.device,dtype=torch.float32),orientations=torch.tensor(Rotation.from_matrix(R@optical).as_quat()[None],device=base.device,dtype=torch.float32),convention='opengl')
   base.sim.render();sensor.update(0.,force_recompute=True)
   qr=base.scene['right_robot'].data.joint_pos.torch[0,:6].cpu().numpy();rtcp,_=ik.tcp_pose(qr,station.rig().bases['right']);clear=float(np.linalg.norm(rtcp-body.pos))>.08
@@ -108,13 +113,14 @@ try:
   nearest=np.linalg.norm(np.maximum(np.abs(R.T@(rtcp-body.pos))-np.array([.020,.027,.024]),0))
   held=bool(nearest<.05 and driver.actions[-1][13]<.5 and not attached)
   clear=bool(nearest>.08)
-  live=bool(pixels.shape[-1]>=3 and np.isfinite(pixels[0,...,:3].cpu().numpy()).all())
+  frame_id=sensor_frame_id(sensor)
+  live=frame_monitor.update(frame_id, pixels.shape[-1]>=3 and np.isfinite(pixels[0,...,:3].cpu().numpy()).all())
   assessment=scorer.update(lifted=bool(corners[:,2].min()>spec.TOP+.020),held=held,latched=attached,position_error_m=native_error,rotation_error_rad=native_angle,other_hand_clear=clear,live_image=live,off_table=bool(body.pos[2]<spec.TOP-.05))
   if k%5==0:
    for name in ('top_cam','left_cam','right_cam','overview_cam'):
     rgb=base.scene[name].data.output['rgb'];rgb=rgb.torch if hasattr(rgb,'torch') else rgb
     Image.fromarray(rgb[0,...,:3].cpu().numpy().astype(np.uint8)).save(out/f'{name}_{k:04d}.png')
-   rows.append(dict(step=k,phase=label,attached=attached,latch_step=latch_step,camera_pos=body.pos.tolist(),target=target.tolist(),error_m=error,angle_deg=float(np.rad2deg(angle)),right_clear=clear,retained_seconds=hold,sensor_error_m=sensor_error,sensor_angle_rad=sensor_angle,image_std=image_std,native_error_m=native_error,native_angle_deg=float(np.rad2deg(native_angle)),returned=returned,entry_verified=gate.entered,local_offset=(targetR.T@(body.pos-target)).tolist(),assessment=assessment,raw_speed=float(np.linalg.norm(body.lin_vel)),gate_speed=gate_speed))
+   rows.append(dict(step=k,phase=label,attached=attached,latch_step=latch_step,camera_pos=body.pos.tolist(),target=target.tolist(),error_m=error,angle_deg=float(np.rad2deg(angle)),right_clear=clear,retained_seconds=hold,sensor_error_m=sensor_error,sensor_angle_rad=sensor_angle,image_std=image_std,native_error_m=native_error,native_angle_deg=float(np.rad2deg(native_angle)),returned=returned,spring_displacement_m=float(spring_local[0]),entry_verified=gate.entered,local_offset=(targetR.T@(body.pos-target)).tolist(),assessment=assessment,frame_id=frame_id,raw_speed=float(np.linalg.norm(body.lin_vel)),gate_speed=gate_speed))
    (out/'trace.json').write_text(json.dumps(rows,indent=2));print(rows[-1],flush=True)
  (out/'result.json').write_text(json.dumps(dict(completed=True,wall_seconds=time.monotonic()-start,final=rows[-1],retention_pass=bool(hold>=2),score=assessment["score"],scope='Dream-1 beta controls both arms; original optical target and scorer unchanged; 90-second trial.'),indent=2))
  driver.close()

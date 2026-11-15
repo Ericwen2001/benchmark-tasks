@@ -31,9 +31,11 @@ try:
  # Begin in original READY working posture; recipient actively presents mount.
  # Detached wrist sensor is world-rooted and follows the physical housing, never the wrist by default.
  emb.camera_config.left_cam.prim_path='{ENV_REGEX_NS}/DetachedLeftCam'
- emb.camera_config.overview_cam.offset.pos=(-.08,-.16,1.04)
- # Set ROS look-at rotation for the diagnostic view only.
- eye=np.array([-.08,-.16,1.04]);f=np.array([.23,.05,.89])-eye;f/=np.linalg.norm(f);r=np.cross(f,[0,0,1]);r/=np.linalg.norm(r);d=np.cross(f,r)
+ B=np.array(spec.LAYOUT['present_rotation'])@np.array(spec.LAYOUT['mount_rotation_in_gripper'])
+ look=spec.GOAL+B@np.array([0,-.025,-.010]);eye=look+B@np.array([.075,-.055,.030])
+ emb.camera_config.overview_cam.offset.pos=tuple(map(float,eye))
+ emb.camera_config.overview_cam.width=640;emb.camera_config.overview_cam.height=360
+ f=look-eye;f/=np.linalg.norm(f);r=np.cross(f,[0,0,1]);r/=np.linalg.norm(r);d=np.cross(f,r)
  emb.camera_config.overview_cam.offset.rot=tuple(Rotation.from_matrix(np.column_stack([r,d,f])).as_quat());emb.camera_config.overview_cam.offset.convention='ros'
  env=make_env(emb,scene='task',task=task,control_hz=20);base=env.unwrapped;env.reset()
  import omni.usd
@@ -42,8 +44,11 @@ try:
  camera_paths=[str(p.GetPath()) for p in stage.Traverse() if p.HasAPI(UsdPhysics.RigidBodyAPI) and 'loose_camera' in str(p.GetPath())]
  if len(camera_paths)!=1:raise RuntimeError('Ambiguous camera rigid body '+str(camera_paths))
  assert stage.GetPrimAtPath(camera_paths[0]+'/shoe_core/geometry/mesh').HasAPI(UsdPhysics.CollisionAPI), "Missing shoe collider"
- from latch_geometry import InsertionGate
- gate=InsertionGate()
+ from runtime_checks import LatchMonitor,FrameDeliveryMonitor,sensor_frame_id
+ latch_monitor=LatchMonitor();gate=latch_monitor.gate;frame_monitor=FrameDeliveryMonitor()
+ import omni.physics.tensors as physics_tensors
+ spring_sim=physics_tensors.create_simulation_view('torch');spring_sim.set_subspace_roots('/')
+ spring_view=spring_sim.create_rigid_body_view('/World/envs/env_0/SpringPlunger')
  from motion import make_plan
  plan=make_plan();sensor=base.scene['left_cam']
  import isaaclab.sim as sim
@@ -117,8 +122,12 @@ try:
   relative_offset=targetR.T@(body.pos-target)
   # Insertion speed is relative to the moving receiver; use consecutive pose samples.
   gate_speed=float(np.linalg.norm(relative_offset-np.array(gate.previous))/.05) if gate.previous is not None else float('inf')
-  if not attached and gate.update(relative_offset,angle,gate_speed):
-   wrist_adapter.latch(stage,parent,camera_paths[0],gp,gR,body.pos,R);attached=True;latch_step=k;dock_finish=k;dock_q=base.scene['right_robot'].data.joint_pos.torch[0,:6].cpu().numpy().copy();wrist_adapter.engage_tooth(stage,parent)
+  from latch_geometry import TOOTH_ENGAGED
+  spring_xyz=spring_view.get_transforms()[0,:3].cpu().numpy()
+  spring_local=targetR.T@(spring_xyz-target)-np.array(TOOTH_ENGAGED)
+  attached=latch_monitor.update(relative_offset,angle,gate_speed,float(spring_local[0]));gate=latch_monitor.gate
+  if attached and dock_finish is None:
+   latch_step=k;dock_finish=k;dock_q=base.scene['right_robot'].data.joint_pos.torch[0,:6].cpu().numpy().copy()
   sensor.set_world_poses(positions=torch.tensor((body.pos+R@lens_offset)[None],device=base.device,dtype=torch.float32),orientations=torch.tensor(Rotation.from_matrix(R@optical).as_quat()[None],device=base.device,dtype=torch.float32),convention='opengl')
   base.sim.render();sensor.update(0.,force_recompute=True)
   qr=base.scene['right_robot'].data.joint_pos.torch[0,:6].cpu().numpy();rtcp,_=ik.tcp_pose(qr,station.rig().bases['right']);clear=float(np.linalg.norm(rtcp-body.pos))>.08
@@ -136,16 +145,17 @@ try:
   nearest=np.linalg.norm(np.maximum(np.abs(R.T@(rtcp-body.pos))-np.array([.020,.027,.024]),0))
   held=bool(nearest<.05 and right[6]<.5 and not attached)
   clear=bool(nearest>.08)
-  live=bool(pixels.shape[-1]>=3 and np.isfinite(pixels[0,...,:3].cpu().numpy()).all())
+  frame_id=sensor_frame_id(sensor)
+  live=frame_monitor.update(frame_id, pixels.shape[-1]>=3 and np.isfinite(pixels[0,...,:3].cpu().numpy()).all())
   assessment=scorer.update(lifted=bool(corners[:,2].min()>spec.TOP+.020),held=held,latched=attached,position_error_m=native_error,rotation_error_rad=native_angle,other_hand_clear=clear,live_image=live,off_table=bool(body.pos[2]<spec.TOP-.05))
   if k%5==0:
    for name in ('top_cam','left_cam','right_cam','overview_cam'):
     rgb=base.scene[name].data.output['rgb'];rgb=rgb.torch if hasattr(rgb,'torch') else rgb
     Image.fromarray(rgb[0,...,:3].cpu().numpy().astype(np.uint8)).save(out/f'{name}_{k:04d}.png')
-   rows.append(dict(step=k,phase=label,attached=attached,latch_step=latch_step,camera_pos=body.pos.tolist(),target=target.tolist(),error_m=error,angle_deg=float(np.rad2deg(angle)),right_clear=clear,retained_seconds=hold,sensor_error_m=sensor_error,sensor_angle_rad=sensor_angle,image_std=image_std,native_error_m=native_error,native_angle_deg=float(np.rad2deg(native_angle)),returned=returned,entry_verified=gate.entered,local_offset=(targetR.T@(body.pos-target)).tolist(),assessment=assessment,servo=servo_audit,raw_speed=float(np.linalg.norm(body.lin_vel)),gate_speed=gate_speed))
+   rows.append(dict(step=k,phase=label,attached=attached,latch_step=latch_step,camera_pos=body.pos.tolist(),target=target.tolist(),error_m=error,angle_deg=float(np.rad2deg(angle)),right_clear=clear,retained_seconds=hold,sensor_error_m=sensor_error,sensor_angle_rad=sensor_angle,image_std=image_std,native_error_m=native_error,native_angle_deg=float(np.rad2deg(native_angle)),returned=returned,spring_displacement_m=float(spring_local[0]),spring_local=spring_local.tolist(),entry_verified=gate.entered,insertion_travel_m=gate.travel,seated_samples=gate.seated_samples,local_offset=(targetR.T@(body.pos-target)).tolist(),assessment=assessment,frame_id=frame_id,servo=servo_audit,raw_speed=float(np.linalg.norm(body.lin_vel)),gate_speed=gate_speed))
    (out/'trace.json').write_text(json.dumps(rows,indent=2));print(rows[-1],flush=True)
   if dock_finish is not None and t>plan.duration+8:break
- (out/'result.json').write_text(json.dumps(dict(completed=True,wall_seconds=time.monotonic()-start,final=rows[-1],retention_pass=bool(hold>=2),score=assessment["score"],scope='Original native camera-to-gripper calibration is immutable. No READY-return requirement. Physical keyed latch approximation; no Dream-1.'),indent=2))
+ (out/'result.json').write_text(json.dumps(dict(completed=True,wall_seconds=time.monotonic()-start,final=rows[-1],retention_pass=bool(hold>=2),score=assessment["score"],scope='Original native camera-to-gripper calibration is immutable. No READY-return requirement. Collision-driven spring plunger; no camera fixed joint; no Dream-1.'),indent=2))
  env.close()
 except Exception:
  import traceback

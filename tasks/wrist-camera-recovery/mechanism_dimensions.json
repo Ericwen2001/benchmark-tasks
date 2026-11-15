@@ -1,7 +1,7 @@
 {
   "units": "metres",
-  "frame": "camera housing frame at the unchanged installation target",
-  "shoe": [
+  "frame": "Camera body frame at original seated pose unless stated otherwise",
+  "shoe_parts": [
     [
       "shoe_core",
       [
@@ -68,24 +68,11 @@
       ]
     ]
   ],
-  "mount": [
+  "mount_parts_as_spawned": [
     [
       "channel_left",
       [
-        -0.013,
-        -0.024999999999999998,
-        -0.012
-      ],
-      [
-        0.004,
-        0.008,
-        0.028
-      ]
-    ],
-    [
-      "channel_right",
-      [
-        0.013,
+        -0.0122,
         -0.024999999999999998,
         -0.012
       ],
@@ -99,7 +86,7 @@
       "channel_back",
       [
         0,
-        -0.03,
+        -0.0282,
         -0.012
       ],
       [
@@ -112,7 +99,7 @@
       "channel_front_left",
       [
         -0.009,
-        -0.0215,
+        -0.0223,
         -0.012
       ],
       [
@@ -125,7 +112,7 @@
       "channel_front_right",
       [
         0.009,
-        -0.0215,
+        -0.0223,
         -0.012
       ],
       [
@@ -139,41 +126,136 @@
       [
         0,
         -0.024999999999999998,
-        -0.027
+        -0.0261
       ],
       [
         0.03,
         0.012,
         0.004
       ]
+    ],
+    [
+      "right_upper",
+      [
+        0.0122,
+        -0.025,
+        -0.002
+      ],
+      [
+        0.004,
+        0.008,
+        0.008
+      ]
+    ],
+    [
+      "right_lower",
+      [
+        0.0122,
+        -0.025,
+        -0.019
+      ],
+      [
+        0.004,
+        0.008,
+        0.014
+      ]
     ]
   ],
-  "tooth_retracted": [
-    0.014,
-    -0.024999999999999998,
-    -0.009
-  ],
-  "tooth_engaged": [
+  "leading_tip": {
+    "upper_z": -0.02,
+    "lower_z": -0.024,
+    "upper_x": [
+      -0.01,
+      0.007
+    ],
+    "lower_x": [
+      -0.008,
+      0.005
+    ],
+    "upper_y": [
+      -0.027,
+      -0.023
+    ],
+    "lower_y": [
+      -0.026,
+      -0.024
+    ]
+  },
+  "tooth_reference": [
     0.0095,
     -0.024999999999999998,
     -0.009
   ],
-  "tooth_size": [
-    0.003,
-    0.003,
-    0.004
-  ],
-  "spring_leaf": {
-    "center": [
-      0.018,
-      -0.025,
-      -0.005
+  "plunger_local_tooth_vertices": [
+    [
+      -0.0015,
+      -0.0015,
+      -0.002
     ],
-    "size": [
-      0.001,
-      0.006,
-      0.03
+    [
+      0.0015,
+      -0.0015,
+      -0.002
+    ],
+    [
+      0.0015,
+      -0.0015,
+      0.002
+    ],
+    [
+      -0.0015,
+      0.0015,
+      -0.002
+    ],
+    [
+      0.0015,
+      0.0015,
+      -0.002
+    ],
+    [
+      0.0015,
+      0.0015,
+      0.002
     ]
-  },
-  "struts": "Endpoints in wrist_adapter.py; square cross-section 0.007 m"
+  ],
+  "plunger_local_parts": [
+    {
+      "name": "release_stem",
+      "center": [
+        0.007,
+        0,
+        0
+      ],
+      "size": [
+        0.015,
+        0.002,
+        0.002
+      ]
+    },
+    {
+      "name": "release_tab",
+      "center": [
+        0.015,
+        0,
+        0
+      ],
+      "size": [
+        0.003,
+        0.01,
+        0.012
+      ]
+    }
+  ],
+  "plunger_mass_kg": 0.002,
+  "joint": {
+    "axis": "mount local +X",
+    "travel": [
+      0,
+      0.005
+    ],
+    "stiffness_N_m": 150,
+    "damping_Ns_m": 0.15,
+    "target_m": -0.0002,
+    "max_force_N": 2
+  }
 }

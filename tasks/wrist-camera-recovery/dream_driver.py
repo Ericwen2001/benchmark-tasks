@@ -1,5 +1,5 @@
 """Official DreamPolicy adapter; actual native observations, no scripted commands."""
-import json,time
+import json,time,os
 from pathlib import Path
 import numpy as np
 class DreamDriver:
@@ -10,7 +10,9 @@ class DreamDriver:
   from inspect_robots_dream.session import DreamSession
   from yam_arena.inspect_embodiment import YamArenaEmbodiment
   from yam_arena.constants import ARM_JOINTS,FINGER_JOINTS
-  key=next(x.split('=',1)[1].strip().strip('\"\x27') for x in (Path.home()/'.dreamlabs/robocurve_credentials').read_text().splitlines() if x.startswith('DREAM_API_KEY='))
+  key=os.environ.get('DREAM_API_KEY')
+  if not key:
+   raise RuntimeError('Set DREAM_API_KEY privately before running the model')
   self.base=base;self.instruction=instruction;self.out=out;self.actions=[];self.states=[];self.step=0
   self.ids={n:(base.scene[n].find_joints(ARM_JOINTS,preserve_order=True)[0],base.scene[n].find_joints(FINGER_JOINTS,preserve_order=True)[0]) for n in ['left_robot','right_robot']}
   interface=YamArenaEmbodiment(scene='station',control_hz=20,cam_width=320,cam_height=176,object_jitter=0)

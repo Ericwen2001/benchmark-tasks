@@ -16,5 +16,9 @@ assert s.update(**kw,off_table=True)['score']==0
 for start in [(0,0,0),(.01,0,.035),(0,.01,.035)]:
  g=InsertionGate();assert not g.update(start,0,0);assert not g.update((0,0,0),0,0)
 g=InsertionGate();assert not g.update((0,0,.035),0,0);assert not g.update((.01,0,.010),0,0);assert not g.update((0,0,0),0,0)
-g=InsertionGate();assert not g.update((0,0,.035),0,0);assert g.update((0,0,0),0,0)
+g=InsertionGate();assert not g.update((0,0,.035),0,0);assert not g.update((0,0,0),0,0)
+g=InsertionGate()
+for k in range(36):g.update((0,0,.035-k*.001),0,.02)
+for _ in range(4):g.update((0,0,0),0,0)
+assert g.latched
 print('PASS scoring tiers, invalidation, side/rear approach and lost-entry rejection')
