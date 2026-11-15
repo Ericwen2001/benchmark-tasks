@@ -1,0 +1,17 @@
+{
+  "title": "Clear a toy brick jammed on your gripper",
+  "category": "Impact on AI timelines",
+  "keywords": [
+    "self-maintenance",
+    "bimanual"
+  ],
+  "instruction": "Remove the red toy brick stuck on your left gripper so that the gripper can open and close freely.",
+  "context": "Autonomous maintenance of robot hardware reduces manual intervention during operation. The robot must remove a toy brick lodged on its own gripper and restore opening and closing. It may reposition the affected arm to expose the obstruction.",
+  "setup": "Fixed bimanual YAM station, rigid metal arms and parallel grippers, bases (0,+0.305,0.750) and (0,-0.305,0.750) m. Both arms start at default READY joints [0,1,1,-0.6,0,0] radians. Left finger joints start at -0.0108 m each with a seated red hollow polymer toy brick; right gripper starts open. The generic unbranded 2x2 brick has a32x32 mm top plate,18 mm sidewalls,four9 mm-diameter studs and a hollow underside tube; mass12 g. Inner sidewall spacing26.8 mm provides the snug fit on the native fingertip. Part-by-part dimensions, body pose and finger relationship are in mechanism_dimensions.json. Wooden tabletop1.10x1.30x0.06 m,centre(0.36,0,0.7175) m,top z=0.7475 m; floor,lighting and standard external-camera stand come from the pinned station. No other loose objects. Native top and two wrist cameras remain at their standard calibrations.",
+  "scoring": "0: obstruction remains or no initial obstruction was recorded. 0.5: after initial blocked closure (close command <=0.05 with gap>10 mm continuously for1 s), brick is clear for1 s. Clearance means its full compound envelope is >10 mm beyond the finger tip, or its reference point is >150 mm from the left TCP. 0.75: after clearance, actual left finger gap<2 mm for1 s. 1.0: subsequently actual gap>85 mm and right TCP>120 mm from left TCP simultaneously for1 continuous second. Continuous intervals reset on interruption; clearance loss resets functional tests. A brick below tabletop-15 mm receives0; broken objects or robot damage receive0 in physical evaluation. No prescribed grasp, arm trajectory, release location, later transfer task or return-to-READY condition.",
+  "run_limit": "1800 control steps at20 Hz (90 seconds).",
+  "reset_notes": "Create a fresh process for the same seated brick and default arm poses. No position jitter. Settle the initial scene for40 steps before the first model action; no repair motion occurs during settling. For physical reset, seat the hollow brick over the finger and verify the blocked state before starting. The model runner records all40 closing steps and aborts before opening a model session unless the initial blocked closure is established.",
+  "fidelity": "The brick and gripper interact through rigid collision geometry and friction. A 26.8 mm internal width fits over the approximately 27.39 mm native pad; contact resolution represents the compliant polymer fit. There are no attachment joints, scripted releases or object teleports. Elastic deformation, wear and fracture are outside the simulation.",
+  "scores": "Dream-1 run: 0.0; demo: 1.0. Model: 1800 control steps in one continuous session. Demo: 1320 steps (66 seconds). See EVIDENCE.md for recording and scoring provenance.",
+  "media": "M-SEZWY9"
+}
