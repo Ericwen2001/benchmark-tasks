@@ -1,0 +1,15 @@
+{
+  "score": 1.0,
+  "final": {
+    "step": 1420,
+    "score": 1.0,
+    "best_score": 1.0,
+    "routed": true,
+    "strap_overlap": true,
+    "right_hand_clear": true,
+    "right_tcp_distance_m": 0.21920457218109352,
+    "release_hold_s": 9.75
+  },
+  "steps_observed": 1420,
+  "rubric": "routing/overlap/released support-free hold"
+}
