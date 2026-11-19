@@ -49,6 +49,10 @@ try:
  import omni.physics.tensors as physics_tensors
  spring_sim=physics_tensors.create_simulation_view('torch');spring_sim.set_subspace_roots('/')
  spring_view=spring_sim.create_rigid_body_view('/World/envs/env_0/SpringPlunger')
+ import camera_tether
+ if not camera_tether.CREATED:raise RuntimeError('Connected tether was not constructed')
+ cable_view=spring_sim.create_rigid_body_view(camera_tether.ROOT+'/segment_*')
+ (out/'tether_geometry.json').write_text(json.dumps(camera_tether.CREATED,indent=2))
  from motion import make_plan
  plan=make_plan();sensor=base.scene['left_cam']
  import isaaclab.sim as sim
@@ -152,7 +156,9 @@ try:
    for name in ('top_cam','left_cam','right_cam','overview_cam'):
     rgb=base.scene[name].data.output['rgb'];rgb=rgb.torch if hasattr(rgb,'torch') else rgb
     Image.fromarray(rgb[0,...,:3].cpu().numpy().astype(np.uint8)).save(out/f'{name}_{k:04d}.png')
-   rows.append(dict(step=k,phase=label,attached=attached,latch_step=latch_step,camera_pos=body.pos.tolist(),target=target.tolist(),error_m=error,angle_deg=float(np.rad2deg(angle)),right_clear=clear,retained_seconds=hold,sensor_error_m=sensor_error,sensor_angle_rad=sensor_angle,image_std=image_std,native_error_m=native_error,native_angle_deg=float(np.rad2deg(native_angle)),returned=returned,spring_displacement_m=float(spring_local[0]),spring_local=spring_local.tolist(),entry_verified=gate.entered,insertion_travel_m=gate.travel,seated_samples=gate.seated_samples,local_offset=(targetR.T@(body.pos-target)).tolist(),assessment=assessment,frame_id=frame_id,servo=servo_audit,raw_speed=float(np.linalg.norm(body.lin_vel)),gate_speed=gate_speed))
+   cable_poses=cable_view.get_transforms().cpu().numpy();cable_vel=cable_view.get_velocities().cpu().numpy()
+   if not np.isfinite(cable_poses).all():raise RuntimeError('Nonfinite cable simulation state')
+   rows.append(dict(cable_max_speed_m_s=float(np.linalg.norm(cable_vel[:,:3],axis=1).max()),cable_min_z_m=float(cable_poses[:,2].min()),step=k,phase=label,attached=attached,latch_step=latch_step,camera_pos=body.pos.tolist(),target=target.tolist(),error_m=error,angle_deg=float(np.rad2deg(angle)),right_clear=clear,retained_seconds=hold,sensor_error_m=sensor_error,sensor_angle_rad=sensor_angle,image_std=image_std,native_error_m=native_error,native_angle_deg=float(np.rad2deg(native_angle)),returned=returned,spring_displacement_m=float(spring_local[0]),spring_local=spring_local.tolist(),entry_verified=gate.entered,insertion_travel_m=gate.travel,seated_samples=gate.seated_samples,local_offset=(targetR.T@(body.pos-target)).tolist(),assessment=assessment,frame_id=frame_id,servo=servo_audit,raw_speed=float(np.linalg.norm(body.lin_vel)),gate_speed=gate_speed))
    (out/'trace.json').write_text(json.dumps(rows,indent=2));print(rows[-1],flush=True)
   if dock_finish is not None and t>plan.duration+8:break
  (out/'result.json').write_text(json.dumps(dict(completed=True,wall_seconds=time.monotonic()-start,final=rows[-1],retention_pass=bool(hold>=2),score=assessment["score"],scope='Original native camera-to-gripper calibration is immutable. No READY-return requirement. Collision-driven spring plunger; no camera fixed joint; no Dream-1.'),indent=2))

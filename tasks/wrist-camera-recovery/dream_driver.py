@@ -3,7 +3,7 @@ import json,time,os
 from pathlib import Path
 import numpy as np
 class DreamDriver:
- def __init__(self,base,instruction,out):
+ def __init__(self,base,instruction,out,rows_per_request=4):
   import dream
   from inspect_robots import Scene
   from inspect_robots_dream.policy import DreamPolicy
@@ -17,7 +17,7 @@ class DreamDriver:
   self.ids={n:(base.scene[n].find_joints(ARM_JOINTS,preserve_order=True)[0],base.scene[n].find_joints(FINGER_JOINTS,preserve_order=True)[0]) for n in ['left_robot','right_robot']}
   interface=YamArenaEmbodiment(scene='station',control_hz=20,cam_width=320,cam_height=176,object_jitter=0)
   self.low,self.high=interface._low,interface._high
-  self.request_audit=[];self.session_id=None;self.last_reply=None
+  self.request_audit=[];self.session_id=None;self.last_reply=None;self.rows_per_request=rows_per_request
   def make_client():
    client=dream.DreamClient(api_key=key)
    original=client.get_action
@@ -26,8 +26,11 @@ class DreamDriver:
     gap=None if self.last_reply is None else sent-self.last_reply
     try:reply=original(*args,**kwargs)
     except dream.DreamSessionExpired as error:
-     (self.out/'SESSION_INVALID.json').write_text(json.dumps({'reason':str(error),'step':self.step,'idle_gap_s':gap},indent=2))
-     raise RuntimeError('Session expired; trial aborted, no automatic session restart accepted') from error
+     if not self.request_audit:
+      reply=original(*args,**kwargs)
+     else:
+      (self.out/'SESSION_INVALID.json').write_text(json.dumps({'reason':str(error),'step':self.step,'idle_gap_s':gap},indent=2))
+      raise RuntimeError('Session expired; trial aborted, no automatic session restart accepted') from error
     sid=client.session_id
     if self.session_id is not None and sid!=self.session_id:
      (self.out/'SESSION_INVALID.json').write_text(json.dumps({'reason':'Session ID changed','step':self.step},indent=2))
@@ -43,10 +46,11 @@ class DreamDriver:
      if (grip<0).any() or (grip>1).any():
       with (self.out/'gripper_clipping.jsonl').open('a') as f:f.write(json.dumps({'step':self.step,'arm':name,'raw_min':float(grip.min()),'raw_max':float(grip.max()),'raw_gripper':grip.tolist()})+'\n')
       chunk[:,6]=np.clip(grip,0,1);reply[name]=chunk.tolist()
+     reply[name]=np.asarray(reply[name])[:rows_per_request].tolist()
     return reply
    client.get_action=checked_action
    return client
-  self.policy=DreamPolicy(session=DreamSession(make_client=make_client),rows_per_request=8,record=False,timeout_s=90)
+  self.policy=DreamPolicy(session=DreamSession(make_client=make_client),rows_per_request=rows_per_request,record=False,timeout_s=90)
   self.policy.bind(interface.info);self.policy.reset(Scene(id='robocurve-local-trial',instruction=instruction,init_seed=42))
   self.save()
  def action(self):
@@ -64,7 +68,7 @@ class DreamDriver:
   row=np.asarray(self.policy.act(o).actions[0].data)
   if row.shape!=(14,) or not np.isfinite(row).all():raise ValueError('Nonfinite/wrong shape Dream action')
   action=np.clip(row,self.low,self.high);self.actions.append(action.copy());self.states.append(state);self.step+=1
-  if self.step%8==0:self.save()
+  if self.step%self.rows_per_request==0:self.save()
   return action
  def save(self):
   (self.out/'dream_transcript.json').write_text(json.dumps(self.policy.transcript(),indent=2))

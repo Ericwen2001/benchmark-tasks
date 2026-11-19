@@ -14,7 +14,7 @@ class LatchMonitor:
         if self.gate.latched and not inside:
             self.gate = InsertionGate()
         seated = self.gate.update(offset, angle_rad, speed)
-        # Retraction removes locking immediately. Releasing the tab while still
+        # Retraction removes locking immediately. Releasing the button while still
         # seated can re-engage mechanically, without an artificial reinsertion.
         self.attached = bool(seated and inside and
                              -.0005 <= spring_displacement_m < .0012)

@@ -2,7 +2,7 @@
 import argparse,json,time
 from pathlib import Path
 import shutil
-p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--max-steps',type=int,default=1800);a=p.parse_args();out=Path(a.out);out.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--max-steps',type=int,default=1800);p.add_argument('--rows-per-request',type=int,choices=[4,8],default=4);a=p.parse_args();out=Path(a.out);out.mkdir(parents=True,exist_ok=True)
 snapshot=out/'source';snapshot.mkdir(exist_ok=True)
 for source in Path(__file__).parent.iterdir():
  if source.suffix in ('.py','.json'):
@@ -47,6 +47,9 @@ try:
  import omni.physics.tensors as physics_tensors
  spring_sim=physics_tensors.create_simulation_view('torch');spring_sim.set_subspace_roots('/')
  spring_view=spring_sim.create_rigid_body_view('/World/envs/env_0/SpringPlunger')
+ import camera_tether
+ if not camera_tether.CREATED:raise RuntimeError('Connected tether not constructed')
+ (out/'tether_geometry.json').write_text(json.dumps(camera_tether.CREATED,indent=2))
  sensor=base.scene['left_cam']
  import isaaclab.sim as sim
  for name,size,position,color in [('lens_trim',(.018,.0002,.018),(0,.01811,0),(.15,.35,.55)),('lens',(.012,.0002,.012),(0,.01824,0),(.015,.02,.025))]:
@@ -73,7 +76,7 @@ try:
  sensor.set_world_poses(positions=torch.tensor((initial.pos+initialR@lens_offset)[None],device=base.device,dtype=torch.float32),orientations=torch.tensor(Rotation.from_matrix(initialR@optical).as_quat()[None],device=base.device,dtype=torch.float32),convention='opengl')
  base.sim.render();sensor.update(0.,force_recompute=True)
  instruction=json.loads(Path(__file__).with_name('task.json').read_text())['instruction']
- driver=DreamDriver(base,instruction,out)
+ driver=DreamDriver(base,instruction,out,a.rows_per_request)
  for k in range(a.max_steps):
   label='Dream-1 control'
   env.step(torch.tensor(driver.action()[None],device=base.device,dtype=torch.float32))

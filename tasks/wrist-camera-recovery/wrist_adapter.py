@@ -29,12 +29,16 @@ def install():
   for name,delta,size in [('right_upper',(.0122,-.025,-.002),(.004,.008,.008)),('right_lower',(.0122,-.025,-.019),(.004,.008,.014))]:
    c=sim.CuboidCfg(size=size,collision_props=PhysxCollisionPropertiesCfg(contact_offset=.0001,rest_offset=0),visual_material=sim.PreviewSurfaceCfg(diffuse_color=(.18,.32,.48),metallic=.6))
    c.func(parent+'/recovery_'+name,c,translation=tuple(center+R.T@np.array(delta)),orientation=tuple(ik.matrix_to_quat_xyzw(R.T)))
+  from quick_release import add_receiver_details
+  add_receiver_details(prim.GetStage(),parent,center,R.T)
   add_spring_plunger(prim.GetStage(),path,parent,center,R.T)
   for side in (-1,1):
    start=np.array([side*.017,-.020,.025]);end=center+R.T@np.array([side*.015,-.030,-.025])
    delta=end-start;length=np.linalg.norm(delta);z=delta/length;x=np.cross([0,0,1],z);x/=np.linalg.norm(x);y=np.cross(z,x)
    c=sim.CuboidCfg(size=(.007,.007,float(length+.007)),collision_props=PhysxCollisionPropertiesCfg(contact_offset=.0002,rest_offset=0),visual_material=sim.PreviewSurfaceCfg(diffuse_color=(.32,.36,.40),metallic=.6))
    c.func(parent+'/recovery_strut_'+str(side).replace('-','m'),c,translation=tuple((start+end)/2),orientation=tuple(Rotation.from_matrix(np.column_stack([x,y,z])).as_quat()))
+  from camera_tether import maybe_build
+  maybe_build(prim.GetStage())
   return prim
  def configured(*args,**kwargs):
   cfg=original(*args,**kwargs)
@@ -53,6 +57,10 @@ def install():
     from isaaclab.sim.spawners.shapes import spawn_cuboid
     prim=spawn_cuboid.__wrapped__(path,cfg,*args,**kwargs)
     add_camera_shoe(path)
+    from quick_release import add_camera_fasteners
+    add_camera_fasteners(prim.GetStage(),path)
+    from camera_tether import maybe_build
+    maybe_build(prim.GetStage(),path)
     return prim
    obj.spawner_cfg.func=compound
    obj.object_cfg.spawn.func=compound
@@ -84,7 +92,7 @@ def add_spring_plunger(stage,arm_path,parent,center,mountR):
  xf=UsdGeom.Xform.Define(stage,path);xf.AddTranslateOp().Set(Gf.Vec3d(*map(float,pos)))
  quat=Rotation.from_matrix(worldR).as_quat();xf.AddOrientOp().Set(Gf.Quatf(float(quat[3]),Gf.Vec3f(*map(float,quat[:3]))))
  body=UsdPhysics.RigidBodyAPI.Apply(xf.GetPrim());body.CreateRigidBodyEnabledAttr(True)
- mass=UsdPhysics.MassAPI.Apply(xf.GetPrim());mass.CreateMassAttr(.002);mass.CreateDiagonalInertiaAttr(Gf.Vec3f(1e-8,1e-8,1e-8))
+ mass=UsdPhysics.MassAPI.Apply(xf.GetPrim());mass.CreateMassAttr(.004);mass.CreateDiagonalInertiaAttr(Gf.Vec3f(2e-7,5e-7,5e-7))
  api=PhysxSchema.PhysxRigidBodyAPI.Apply(xf.GetPrim());api.CreateSolverPositionIterationCountAttr(32);api.CreateSolverVelocityIterationCountAttr(8)
  mesh=UsdGeom.Mesh.Define(stage,path+'/tooth')
  pts=[(-.0015,y,-.002) for y in [-.0015,.0015]]
@@ -94,9 +102,10 @@ def add_spring_plunger(stage,arm_path,parent,center,mountR):
  UsdPhysics.CollisionAPI.Apply(mesh.GetPrim());UsdPhysics.MeshCollisionAPI.Apply(mesh.GetPrim()).CreateApproximationAttr('convexHull')
  col=PhysxSchema.PhysxCollisionAPI.Apply(mesh.GetPrim());col.CreateContactOffsetAttr(.0001);col.CreateRestOffsetAttr(0.)
  mat=UsdShade.Material.Define(stage,path+'/Material');shader=UsdShade.Shader.Define(stage,path+'/Material/Shader');shader.CreateIdAttr('UsdPreviewSurface');shader.CreateInput('diffuseColor',Sdf.ValueTypeNames.Color3f).Set((.9,.55,.12));mat.CreateSurfaceOutput().ConnectToSource(shader.ConnectableAPI(),'surface');UsdShade.MaterialBindingAPI.Apply(mesh.GetPrim()).Bind(mat)
- # One rigid plunger carries both tooth and accessible external pull tab.
- # Pull the tab in local +X to retract the tooth; no logical release switch.
- for name,center,size in [('release_stem',(.007,0,0),(.015,.002,.002)),('release_tab',(.015,0,0),(.003,.010,.012))]:
+ # Contact with the left-side button moves the rear return yoke and tooth
+ # together in +X. Button and tooth are one rigid body, no release trigger.
+ from quick_release import BUTTON_PARTS
+ for name,center,size in BUTTON_PARTS:
   cube=UsdGeom.Cube.Define(stage,path+'/'+name);cube.CreateSizeAttr(1.);cube.AddTranslateOp().Set(Gf.Vec3d(*center));cube.AddScaleOp().Set(Gf.Vec3f(*size));cube.CreateDisplayColorAttr([(.9,.55,.12)])
   UsdPhysics.CollisionAPI.Apply(cube.GetPrim());cc=PhysxSchema.PhysxCollisionAPI.Apply(cube.GetPrim());cc.CreateContactOffsetAttr(.0001);cc.CreateRestOffsetAttr(0.);UsdShade.MaterialBindingAPI.Apply(cube.GetPrim()).Bind(mat)
  joint=UsdPhysics.PrismaticJoint.Define(stage,path+'/SpringGuide');joint.CreateBody0Rel().SetTargets([Sdf.Path(parent)]);joint.CreateBody1Rel().SetTargets([Sdf.Path(path)])
@@ -104,6 +113,8 @@ def add_spring_plunger(stage,arm_path,parent,center,mountR):
  joint.CreateLocalPos0Attr().Set(Gf.Vec3f(*map(float,local)));q=Rotation.from_matrix(mountR).as_quat();joint.CreateLocalRot0Attr().Set(Gf.Quatf(float(q[3]),Gf.Vec3f(*map(float,q[:3]))));joint.CreateLocalPos1Attr().Set(Gf.Vec3f(0));joint.CreateLocalRot1Attr().Set(Gf.Quatf(1))
  joint.CreateExcludeFromArticulationAttr(True);joint.CreateCollisionEnabledAttr(False)
  drive=UsdPhysics.DriveAPI.Apply(joint.GetPrim(),'linear');drive.CreateTypeAttr('force');drive.CreateStiffnessAttr(150.);drive.CreateDampingAttr(.15);drive.CreateTargetPositionAttr(-.0002);drive.CreateMaxForceAttr(2.)
+ from quick_release import add_press_probe
+ add_press_probe(stage,pos,worldR)
 
 
 def add_tapered_leading(camera_path,pos,size):

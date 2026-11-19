@@ -220,33 +220,59 @@
   ],
   "plunger_local_parts": [
     {
-      "name": "release_stem",
+      "name": "tooth_stem",
       "center": [
-        0.007,
+        0.0055,
         0,
         0
       ],
       "size": [
-        0.015,
+        0.008,
         0.002,
         0.002
       ]
     },
     {
-      "name": "release_tab",
+      "name": "rear_return",
       "center": [
-        0.015,
-        0,
+        0.008,
+        -0.008,
         0
       ],
       "size": [
-        0.003,
+        0.002,
+        0.018,
+        0.002
+      ]
+    },
+    {
+      "name": "rear_crossbar",
+      "center": [
+        -0.0126,
+        -0.016,
+        0
+      ],
+      "size": [
+        0.0432,
+        0.002,
+        0.002
+      ]
+    },
+    {
+      "name": "release_button",
+      "center": [
+        -0.0332,
+        -0.016,
+        0
+      ],
+      "size": [
+        0.004,
         0.01,
-        0.012
+        0.01
       ]
     }
   ],
-  "plunger_mass_kg": 0.002,
+  "plunger_mass_kg": 0.004,
   "joint": {
     "axis": "mount local +X",
     "travel": [
@@ -257,5 +283,79 @@
     "damping_Ns_m": 0.15,
     "target_m": -0.0002,
     "max_force_N": 2
-  }
+  },
+  "release": {
+    "input": "Press left-side button in camera-frame +X",
+    "coupling": "Single rigid return yoke behind receiver backplate links button to opposite tooth",
+    "travel_m": 0.005,
+    "button_center_camera_frame_m": [
+      -0.0237,
+      -0.041,
+      -0.009
+    ]
+  },
+  "mouth": {
+    "lower_z_m": 0.002,
+    "upper_z_m": 0.006,
+    "bottom_inner_half_width_m": 0.0102,
+    "top_inner_half_width_m": 0.0122
+  },
+  "fasteners": {
+    "wrist_receiver": "Two screw heads on bracket feet at gripper X=+-17mm; permanent receiver attachment",
+    "camera_plate": "Two flush screw heads on rear shoe; permanent camera-to-plate attachment"
+  },
+  "release_cassette_parts_camera_frame": [
+    {
+      "name": "back",
+      "center": [
+        0.0005,
+        -0.048,
+        -0.009
+      ],
+      "size": [
+        0.049,
+        0.002,
+        0.02
+      ]
+    },
+    {
+      "name": "top",
+      "center": [
+        0.0005,
+        -0.039,
+        0.001
+      ],
+      "size": [
+        0.049,
+        0.02,
+        0.002
+      ]
+    },
+    {
+      "name": "bottom",
+      "center": [
+        0.0005,
+        -0.039,
+        -0.019
+      ],
+      "size": [
+        0.049,
+        0.02,
+        0.002
+      ]
+    },
+    {
+      "name": "right",
+      "center": [
+        0.026,
+        -0.039,
+        -0.009
+      ],
+      "size": [
+        0.002,
+        0.02,
+        0.02
+      ]
+    }
+  ]
 }
