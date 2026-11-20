@@ -1,1 +1,2 @@
-Dream-1 run: 0.0; demo: 1.0
+Scripted demo: 1.0
+Dream-1 run: 0.00 (1,800 steps, 90 seconds, one session).

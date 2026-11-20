@@ -1,6 +1,6 @@
 from pathlib import Path
 import argparse,json,time,traceback,subprocess
-p=argparse.ArgumentParser();p.add_argument('--steps',type=int,default=140);p.add_argument('--out',required=True);a=p.parse_args();OUT=Path(a.out);OUT.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--steps',type=int,default=1800);p.add_argument('--out',required=True);a=p.parse_args();OUT=Path(a.out);OUT.mkdir(parents=True,exist_ok=True)
 from isaaclab.app import AppLauncher
 app=AppLauncher(headless=True,enable_cameras=True,device='cuda:0').app
 try:
@@ -32,7 +32,7 @@ try:
  (OUT/'initialization_check.json').write_text(json.dumps({'reset_once_before_action':True,'max_cable_position_error_m':float(np.linalg.norm(poses(cv)[:,:3]-np.array(hardware.CREATED['cable_poses'])[:,:3],axis=1).max())}))
  import importlib.util
  spec=importlib.util.spec_from_file_location('cable_dream_driver',Path(__file__).with_name('dream_driver.py'));module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);DreamDriver=module.DreamDriver
- print('Dream driver',module.__file__,'rows_per_request=8',flush=True)
+ print('Dream driver',module.__file__,'rows_per_request=4',flush=True)
  def mount_T():
   robot=b.scene['left_robot'];i=robot.body_names.index('link3');pos=robot.data.body_link_pos_w[0,i].cpu().numpy();q=robot.data.body_link_quat_w[0,i].cpu().numpy();T=np.eye(4);T[:3,3]=pos;T[:3,:3]=Rotation.from_quat(q).as_matrix();return T
  import importlib.util
@@ -41,21 +41,22 @@ try:
  # Warm up before requesting a paid session; native images only.
  from yam_arena.constants import READY
  for _ in range(20):env.step(torch.tensor([[*READY,1.,*json.loads(Path(__file__).with_name('initial_robot_state.json').read_text())['right_actual_q'],1.]],device=b.device,dtype=torch.float32))
- instruction="The left wrist camera cable is hanging loose. Use the right hand to place the loose cable over the round retaining peg on the side of the left arm, then fold the upright hook-and-loop strap down over the cable and attach it to the round pad. Release the strap and move the right hand away."
+ instruction=json.loads((Path(__file__).with_name('task.json')).read_text())['instruction']
  (OUT/'instruction.txt').write_text(instruction)
  driver=DreamDriver(b,instruction,OUT);started=time.monotonic()
- for k in range(1800):
+ for k in range(a.steps):
   action=driver.action()
   if latched:adhesive.maintain(mount_T())
-  env.step(torch.tensor(action[None],device=b.device,dtype=torch.float32))
+  _,_,terminated,truncated,_=env.step(torch.tensor(action[None],device=b.device,dtype=torch.float32))
+  if bool(terminated.any()) or bool(truncated.any()):raise RuntimeError('Unexpected environment termination or reset')
   T=mount_T();fp=poses(fv)
-  if not latched:latched=adhesive.update(fp,T,.05)
+  latched=adhesive.update(fp,T,.05) or latched
   if k%5==0:
    for name in ['top_cam','left_cam','right_cam']:
     rgb=b.scene[name].data.output['rgb'];rgb=rgb.torch if hasattr(rgb,'torch') else rgb;Image.fromarray(rgb[0,:,:,:3].cpu().numpy().astype('uint8')).save(OUT/f'{name}_{k:04d}.png')
    rows.append(dict(step=k,left_actual_q=b.scene['left_robot'].data.joint_pos.torch[0,:6].cpu().tolist(),right_actual_q=b.scene['right_robot'].data.joint_pos.torch[0,:6].cpu().tolist(),right_actual_fingers=b.scene['right_robot'].data.joint_pos.torch[0,6:].cpu().tolist(),phase='Dream-1',latched=latched,cable=poses(cv).tolist(),flap=fp.tolist()))
   if k%100==0:print('Dream step',k,'latched',latched,'wall',time.monotonic()-started,flush=True);(OUT/'trace.json').write_text(json.dumps(rows))
- driver.close();(OUT/'trace.json').write_text(json.dumps(rows));(OUT/'result.json').write_text(json.dumps(dict(completed=True,steps=1800,continuous_session=(len({x['session_id'] for x in driver.request_audit})==1),latched=latched,remaining_contact_regions=adhesive.matches(poses(fv),mount_T()),wall_seconds=time.monotonic()-started),indent=2));env.close()
+ driver.close();(OUT/'trace.json').write_text(json.dumps(rows));(OUT/'result.json').write_text(json.dumps(dict(completed=True,steps=a.steps,continuous_session=(len({x['session_id'] for x in driver.request_audit})==1),latched=latched,remaining_contact_regions=adhesive.matches(poses(fv),mount_T()),wall_seconds=time.monotonic()-started),indent=2));env.close()
 except Exception:
  (OUT/'error.txt').write_text(traceback.format_exc());print(traceback.format_exc(),flush=True)
 finally:app.close()

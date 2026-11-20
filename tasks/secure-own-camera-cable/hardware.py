@@ -48,7 +48,7 @@ def build(stage,links):
   o=UsdGeom.Cylinder.Define(stage,lp+'/'+name);o.CreateAxisAttr('X');o.CreateRadiusAttr(radius);o.CreateHeightAttr(length)
   o.AddTranslateOp().Set(Gf.Vec3d(*map(float,local([x,0,0]))));o.AddOrientOp().Set(quat(B));o.CreateDisplayColorAttr([color]);collision(o.GetPrim())
  peg_cylinder('peg_shaft',.010,.040,.010,(.30,.39,.46))
- peg_cylinder('peg_round_cap',.032,.005,.020,(.36,.47,.55))
+ peg_cylinder('peg_round_cap',.032,.005,.018,(.36,.47,.55))
  # Loop receiving surface on the outer cap; strap folds over cable and cap.
  peg_cylinder('loop_receiver_face',.035,.001,.017,(.10,.65,.70))
  # Original link2 port height and longitudinal position; opposite/right-facing shell.
@@ -114,26 +114,26 @@ def build(stage,links):
  patch=np.array(fit['landing']['centres']);patchnorm=[]
  for p in patch:
   n=p-np.array([-.05,-.0335,p[2]]);patchnorm.append((n/np.linalg.norm(n)).tolist())
- root='/World/envs/env_0/service_flap';UsdGeom.Xform.Define(stage,root);flap=[];flapposes=[];N=10;L=.140/N
+ root='/World/envs/env_0/service_flap';UsdGeom.Xform.Define(stage,root);flap=[];flapposes=[];N=12;L=.014
  rootlocal=np.array([-.05+.044*np.cos(2.8),-.0335+.029*np.sin(2.8),-.16])
  direction=np.array([-1.,0.,0.]);direction/=np.linalg.norm(direction);yy=np.array([0.,0.,1.]);localR=np.column_stack([direction,yy,np.cross(direction,yy)]);initialR=f['link3'][:3,:3]@localR;attach=(f['link3']@np.r_[rootlocal,1])[:3]
  # Curved rest shape, toward the outside (+hook X), with compliant joints.
  edge=attach.copy();previousR=None
  for i in range(N):
-  restR=localR@Rotation.from_euler('y',-(5+30*i/(N-1)),degrees=True).as_matrix()
+  restR=localR@Rotation.from_euler('y',-(5+30*min(i,9)/9),degrees=True).as_matrix()
   initialR=f['link3'][:3,:3]@restR
   pos=edge+initialR[:,0]*L/2;edge=edge+initialR[:,0]*L
-  p=root+f'/segment_{i:03d}';flap.append(p);xf=UsdGeom.Xform.Define(stage,p);xf.AddTranslateOp().Set(Gf.Vec3d(*map(float,pos)));xf.AddOrientOp().Set(quat(initialR));UsdPhysics.RigidBodyAPI.Apply(xf.GetPrim());PhysxSchema.PhysxContactReportAPI.Apply(xf.GetPrim()).CreateThresholdAttr(0.);UsdPhysics.MassAPI.Apply(xf.GetPrim()).CreateMassAttr(.0056/N)
+  p=root+f'/segment_{i:03d}';flap.append(p);xf=UsdGeom.Xform.Define(stage,p);xf.AddTranslateOp().Set(Gf.Vec3d(*map(float,pos)));xf.AddOrientOp().Set(quat(initialR));UsdPhysics.RigidBodyAPI.Apply(xf.GetPrim());PhysxSchema.PhysxContactReportAPI.Apply(xf.GetPrim()).CreateThresholdAttr(0.);UsdPhysics.MassAPI.Apply(xf.GetPrim()).CreateMassAttr(.0056/10)
   ph=PhysxSchema.PhysxRigidBodyAPI.Apply(xf.GetPrim());ph.CreateSolverPositionIterationCountAttr(128);ph.CreateSolverVelocityIterationCountAttr(16);ph.CreateAngularDampingAttr(2.)
-  box(p+'/cloth',np.zeros(3),(L,.024 if i>=N-3 else .020,.0015),(.92,.65,.25) if i>=N-3 else (.60,.25,.08))
-  box(p+'/single_hook_face',[0,0,.001],(L,.020,.0003),(.68,.12,.38),collide=False)
+  box(p+'/cloth',np.zeros(3),(L,.024 if i>=7 else .020,.0015),(.045,.045,.045) if i>=7 else (.025,.025,.025))
+  box(p+'/single_hook_face',[0,0,.001],(L,.020,.0003),(.030,.030,.030),collide=False)
   j=UsdPhysics.RevoluteJoint.Define(stage,root+f'/hinge_{i}');j.CreateBody0Rel().SetTargets([Sdf.Path(lp if i==0 else flap[i-1])]);j.CreateBody1Rel().SetTargets([Sdf.Path(p)]);j.CreateAxisAttr('Y');j.CreateLocalPos0Attr(vec(rootlocal if i==0 else [L/2,0,0]));j.CreateLocalPos1Attr(vec([-L/2,0,0]));j.CreateLocalRot0Attr(quat(restR if i==0 else previousR.T@restR));j.CreateLocalRot1Attr(quat(np.eye(3)));j.CreateLowerLimitAttr(-150.);j.CreateUpperLimitAttr(150.);j.CreateExcludeFromArticulationAttr(True);j.CreateCollisionEnabledAttr(False)
   drive=UsdPhysics.DriveAPI.Apply(j.GetPrim(),'angular');drive.CreateTypeAttr('force');drive.CreateStiffnessAttr(.20 if i==0 else .12);drive.CreateDampingAttr(.002);drive.CreateMaxForceAttr(.015);drive.CreateTargetPositionAttr(0.)
   previousR=restR.copy()
   flapposes.append(np.r_[pos,Rotation.from_matrix(initialR).as_quat()].tolist())
  UsdPhysics.FilteredPairsAPI.Apply(stage.GetPrimAtPath(lp)).CreateFilteredPairsRel().SetTargets([Sdf.Path(flap[0])])
- CREATED.update(pull_tab_local=[0,0,0],pull_tab_segment=N-1,pull_tab_model='plain strap end, no loop',rest_curve_degrees=[5,35],strap_length_m=.140,strap_segment_length_m=L,strap_root_local=rootlocal.tolist(),landing_centres_local=patch.tolist(),landing_normals_local=patchnorm)
- CREATED.update(support_type='mushroom peg',peg_shaft_radius_m=.010,peg_shaft_length_m=.040,peg_cap_radius_m=.020,adhesive_enabled=False,hook_segments=list(range(N)),hook_face_local_normal=[0,0,1],loop_face_hook_local=[.0355,0,0],loop_normal_hook_local=[1,0,0],initialization_note='Settled cable state and elastic open strap.')
+ CREATED.update(pull_tab_local=[0,0,0],pull_tab_segment=9,pull_tab_model='wide grasp region, no loop',rest_curve_degrees=[5,35],strap_length_m=N*L,strap_segment_length_m=L,strap_root_local=rootlocal.tolist(),landing_centres_local=patch.tolist(),landing_normals_local=patchnorm)
+ CREATED.update(support_type='mushroom peg',peg_shaft_radius_m=.010,peg_shaft_length_m=.040,peg_cap_radius_m=.018,adhesive_enabled=False,hook_segments=list(range(N)),hook_face_local_normal=[0,0,1],loop_face_hook_local=[.0355,0,0],loop_normal_hook_local=[1,0,0],initialization_note='Settled cable state and elastic open strap.')
  CREATED.update(links=links,cable=g,cable_poses=np.column_stack([centers,q]).tolist(),flap_poses=flapposes,root=root,port_local=port.tolist(),strain_relief_local=guide.tolist(),secured_tail_length_m=tail_length,total_cable_length_m=.74,elastic_model=dict(rest_shape="initial smooth arc",bend_stiffness_Nm_per_degree=.008,bend_damping_Nm_per_degree_per_second=.0002,bend_limit_degrees=15,twist_limit_degrees=30))
 
  # Initialize from physically settled poses. Keep original joints/rest angles;

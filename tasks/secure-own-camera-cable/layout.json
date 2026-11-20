@@ -43,14 +43,14 @@
   "peg": {
     "shaft_length_m": 0.04,
     "shaft_diameter_m": 0.02,
-    "cap_diameter_m": 0.04
+    "cap_diameter_m": 0.036
   },
   "strap": {
-    "length_m": 0.14,
+    "length_m": 0.168,
     "width_m": 0.02,
     "end_width_m": 0.024,
     "thickness_m": 0.0015,
-    "segments": 10
+    "segments": 12
   },
   "initial_settled_state": "rest_pose.json",
   "camera_mount": "camera_mount.json",

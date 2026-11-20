@@ -18,6 +18,16 @@ try:
   d=orig(cam);d.pop('bottle',None);return d
  sm.station_assets=assets
  emb=BimanualYamEmbodiment(enable_cameras=True,overview_cam=False,contact_sensors=False,robot_contact_offset=.0005,rig=station.rig(),cam_width=320,cam_height=176)
+ # The scripted run records once per five actions. Physics is unchanged.
+ original_env_cfg=sm.env_cfg_callback
+ def recording_env_cfg(control_hz=None):
+  configure=original_env_cfg(control_hz)
+  def apply(cfg):
+   configure(cfg)
+   cfg.sim.render_interval=5*cfg.decimation
+   return cfg
+  return apply
+ sm.env_cfg_callback=recording_env_cfg
  env=sm.make_env(emb,scene='station',control_hz=20,device='cuda:0');b=env.unwrapped;env.reset()
  pv=b.sim.physics_manager.get_physics_sim_view();cv=pv.create_rigid_body_view('/World/envs/env_0/service_cable/segment_*');fv=pv.create_rigid_body_view('/World/envs/env_0/service_flap/segment_*')
 
@@ -54,27 +64,57 @@ try:
    aq=jointq('right');lq=jointq('left');tcp,RR=ik.tcp_pose(aq[:6],station.rig().bases['right']);fp=poses(fv);distance=float(np.linalg.norm(fp[seg,:3]-tcp-RR[:,2]*.006))
    T=actual_mount_T()
    if k==1:pass
-   if label in ['lower strap','press strap'] and not latched:
-    if adhesive.update(fp,T,.05):latched=True;print('CONTACT BOND',k,flush=True)
+   if label in ['open fingers before pressing','align open fingertip with strap face','push outer strap face','hold fingertip pressure']:
+    was_latched=latched
+    latched=adhesive.update(fp,T,.05) or latched
+    if latched and not was_latched:print('CONTACT BOND',k,flush=True)
    if k%5==0:
-    rows.append(dict(step=k,phase=label,right_actual_q=aq[:6].tolist(),right_command_q=qr.tolist(),right_actual_fingers=aq[6:].tolist(),left_actual_q=lq[:6].tolist(),flap=fp.tolist(),cable=poses(cv).tolist(),grasp_distance=distance,latched=latched))
+    rows.append(dict(step=k,phase=label,right_actual_q=aq[:6].tolist(),right_command_q=qr.tolist(),right_actual_fingers=aq[6:].tolist(),left_actual_q=lq[:6].tolist(),flap=fp.tolist(),cable=poses(cv).tolist(),grasp_distance=distance,latched=latched,bonded_segments=list(adhesive.bonded_indices)))
     for name in ['top_cam','left_cam','right_cam']:
      rgb=b.scene[name].data.output['rgb'];rgb=rgb.torch if hasattr(rgb,'torch') else rgb;Image.fromarray(rgb[0,:,:,:3].cpu().numpy().astype('uint8')).save(OUT/f'{name}_{k:04d}.png')
    if k%20==0:pass
    if k%20==0:print(k,label,'distance',round(distance,4),'qerr',round(float(max(abs(aq[:6]-qr))),4),flush=True);(OUT/'trace.json').write_text(json.dumps(rows))
   return distance,float(max(abs(aq[:6]-qr)))
- previous_phase=None
+ def press_outer_face():
+  from scipy.optimize import least_squares
+  q_actual=jointq('right')[:6]
+  base=station.rig().bases['right']
+  _,rotation=ik.tcp_pose(q_actual,base)
+  T=actual_mount_T()
+  basis=T[:3,:3]@hardware.B
+  centre=(T@np.r_[hardware.MOUNT,1.])[:3]
+  opening=.75
+  # Positive-X fingertip. Offset includes half the pad thickness and the
+  # distance from the wrist TCP to the front of the rubber finger.
+  finger_offset=np.array([opening*.04695+.004,0,.013])
+
+  def target(peg_x, steps, label):
+   tip_goal=centre+basis@np.array([peg_x,.001,.014])
+   goal=tip_goal-rotation@finger_offset
+   def loss(q):
+    position,orientation=ik.tcp_pose(q,base)
+    return np.r_[position-goal,.06*Rotation.from_matrix(rotation@orientation.T).as_rotvec()]
+   fit=least_squares(loss, qr, bounds=(ik.LOWER+1e-7,ik.UPPER-1e-7),max_nfev=120)
+   if np.linalg.norm(loss(fit.x)[:3])>.004:
+    raise RuntimeError(f'Could not plan {label}')
+   move(fit.x,opening,steps,label)
+
+  target(.065,18,'align open fingertip with strap face')
+  target(.035,24,'push outer strap face')
+  move(qr.copy(),opening,15,'hold fingertip pressure')
+  target(.085,25,'withdraw fingertip along pad normal')
+
  for row in json.loads((P/'replay_actions.json').read_text()):
-  if previous_phase=='lower strap' and row['phase']!='lower strap':
-   from scipy.optimize import least_squares
-   for attempt in range(3):
-    if latched:break
-    aq=jointq('right')[:6];pp,RR=ik.tcp_pose(aq,station.rig().bases['right']);T=actual_mount_T();normal=T[:3,:3]@hardware.B[:,0];goal=pp-normal*.001
-    def press_loss(v):
-     pt,rt=ik.tcp_pose(v,station.rig().bases['right']);return np.r_[pt-goal,.08*Rotation.from_matrix(RR@rt.T).as_rotvec()]
-    fit=least_squares(press_loss,aq,bounds=(ik.LOWER+1e-7,ik.UPPER-1e-7),max_nfev=120)
-    move(qr+(fit.x-aq),0.,20,'press strap')
-  move(np.array(row['q']),row['grip'],5,row['phase']);previous_phase=row['phase']
+  phase=row['phase']
+  if phase=='direct release':
+   move(qr.copy(),.75,5,'open fingers before pressing')
+   press_outer_face()
+   break
+  move(np.array(row['q']),row['grip'],5,phase)
+ # Retreat via the older clear pose after the fingertip has left the pad.
+ clear=next(r for r in reversed(json.loads((P/'replay_actions.json').read_text()))
+            if r['phase']=='observe without support')
+ move(np.array(clear['q']),1.,35,'move away from the arm')
  move(qr.copy(),1.,60,'final unsupported hold')
  grasp=True
  T=actual_mount_T();remaining=adhesive.matches(poses(fv),T);held=latched and len(remaining)>=1

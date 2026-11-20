@@ -25,13 +25,14 @@ class DreamDriver:
     sent=time.monotonic()
     gap=None if self.last_reply is None else sent-self.last_reply
     try:reply=original(*args,**kwargs)
-    except dream.DreamSessionExpired as error:
-     with (self.out/'session_restarts.jsonl').open('a') as f:f.write(json.dumps({'step':self.step,'idle_gap_s':gap,'reason':'session expired; resumed'})+'\n')
-     print('Dream session expired at',self.step,'continuing as authorized',flush=True)
+    except dream.DreamSessionExpired:
+     if self.step or self.request_audit:
+      raise RuntimeError(f'Dream session expired at action {self.step}') from None
+     print('Dream warm-up expired before the first action; retrying once',flush=True)
      reply=original(*args,**kwargs)
     sid=client.session_id
-    if self.session_id is not None and sid!=self.session_id:
-     print('Dream session changed at step',self.step,flush=True)
+    if not sid or (self.session_id is not None and sid!=self.session_id):
+     raise RuntimeError(f'Dream session continuity lost at action {self.step}')
     self.session_id=sid;self.last_reply=time.monotonic()
     self.request_audit.append({'step':self.step,'session_id':sid,'idle_gap_s':gap,'wall_rtt_s':self.last_reply-sent})
     (self.out/'session_continuity.json').write_text(json.dumps({'sessions':len({x['session_id'] for x in self.request_audit}),'requests':self.request_audit},indent=2))
@@ -46,7 +47,7 @@ class DreamDriver:
     return reply
    client.get_action=checked_action
    return client
-  self.policy=DreamPolicy(session=DreamSession(make_client=make_client),rows_per_request=8,record=False,timeout_s=90)
+  self.policy=DreamPolicy(session=DreamSession(make_client=make_client),rows_per_request=4,record=False,timeout_s=90)
   self.policy.bind(interface.info);self.policy.reset(Scene(id='robocurve-local-trial',instruction=instruction,init_seed=42))
   self.save()
  def action(self):

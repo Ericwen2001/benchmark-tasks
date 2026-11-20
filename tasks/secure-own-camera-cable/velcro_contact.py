@@ -1,6 +1,6 @@
 """Contact-and-compression-triggered local ideal adhesion.
 Only engaged rigid strip patches are constrained; adjoining elastic joints
-retain dynamics. Constraint projection is applied at physics frequency.
+retain dynamics. Adhesion is resolved with the other joints by PhysX.
 """
 import numpy as np
 from scipy.spatial.transform import Rotation
@@ -17,29 +17,36 @@ class VelcroContact:
    if abs(p[0]-.0355)<=.0015 and np.linalg.norm(p[1:])<.017 and R[:,2]@B[:,0]<-.866:out.append(i)
   return out
  def bind(self):
-  import omni.physx
-  self.subscription=omni.physx.get_physx_interface().subscribe_physics_step_events(lambda *args:self._project())
+  import omni.usd
+  self.stage=omni.usd.get_context().get_stage()
  def update(self,poses,T,dt):
   self.T=T.copy()
-  if self.bond_index is not None:return False
+  if len(self.bonded_indices)==len(poses):return False
   f=self.contacts.get_contact_force_matrix(dt);f=f.numpy() if hasattr(f,'numpy') else f.cpu().numpy()
   forces=np.linalg.norm(f.reshape(len(poses),-1,3),axis=2).sum(axis=1);self.last_forces=forces.tolist()
   ids=self.matches(poses,T)
-  for i in range(len(poses)):self.hold[i]=self.hold.get(i,0)+dt if i in ids and forces[i]>.05 else 0.
-  active=[i for i in ids if self.hold[i]>=.2-1e-8]
+  for i in range(len(poses)):self.hold[i]=self.hold.get(i,0)+dt if i in ids and i not in self.local and forces[i]>.025 else 0.
+  active=[i for i in ids if self.hold[i]>=.10-1e-8]
   if not active:return False
   # Pick the strongest actually pressed patch, not the entire strip.
   i=max(active,key=lambda i:forces[i]);row=poses[i]
-  self.local[i]=((row[:3]-T[:3,3])@T[:3,:3],T[:3,:3].T@Rotation.from_quat(row[3:]).as_matrix())
-  self.bonded_indices=[i];self.bond_index=i;return True
+  from pxr import Gf, Sdf, UsdPhysics
+  p=(row[:3]-T[:3,3])@T[:3,:3]
+  R=T[:3,:3].T@Rotation.from_quat(row[3:]).as_matrix()
+  q=Rotation.from_matrix(R).as_quat()
+  root=self.h.CREATED['root']
+  joint=UsdPhysics.FixedJoint.Define(self.stage,f'{root}/pad_bond_{i:03d}')
+  joint.CreateBody0Rel().SetTargets([Sdf.Path(self.h.CREATED['links']['link3'])])
+  joint.CreateBody1Rel().SetTargets([Sdf.Path(f'{root}/segment_{i:03d}')])
+  joint.CreateLocalPos0Attr(Gf.Vec3f(*map(float,p)))
+  joint.CreateLocalRot0Attr(Gf.Quatf(float(q[3]),Gf.Vec3f(*map(float,q[:3]))))
+  joint.CreateLocalPos1Attr(Gf.Vec3f(0.,0.,0.))
+  joint.CreateLocalRot1Attr(Gf.Quatf(1.,0.,0.,0.))
+  joint.CreateExcludeFromArticulationAttr(True)
+  joint.CreateCollisionEnabledAttr(True)
+  joint.CreateJointEnabledAttr(True)
+  self.local[i]=(p,R)
+  self.bonded_indices.append(i)
+  if self.bond_index is None:self.bond_index=i
+  return True
  def maintain(self,T):self.T=T.copy()
- def _project(self):
-  if not self.local or self.T is None:return
-  import warp as wp
-  raw=self.view.get_transforms();rows=(raw.numpy() if hasattr(raw,'numpy') else raw.cpu().numpy()).copy()
-  raw=self.view.get_velocities();vel=(raw.numpy() if hasattr(raw,'numpy') else raw.cpu().numpy()).copy()
-  for i,(p,R) in self.local.items():
-   rows[i]=np.r_[self.T[:3,3]+self.T[:3,:3]@p,Rotation.from_matrix(self.T[:3,:3]@R).as_quat()];vel[i]=0.
-  ids=wp.array(np.array(self.bonded_indices,dtype=np.int32),dtype=wp.int32,device='cuda:0')
-  self.view.set_transforms(wp.array(rows.astype(np.float32),dtype=wp.float32,device='cuda:0'),ids)
-  self.view.set_velocities(wp.array(vel.astype(np.float32),dtype=wp.float32,device='cuda:0'),ids)
